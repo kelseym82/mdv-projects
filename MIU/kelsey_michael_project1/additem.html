@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Visual Frameworks Project 3 -->
+<!-- Michael Kelsey -->
+<!-- VFW 1201 -->
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta keywords="To-Do List, Chore, Errand, List, Me Time" />
+		<meta description="This is an app that adds activities to a to-do list" />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="Handheldfriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<link href="style.css" rel="stylesheet"/>
+		<title>To-Do List</title>
+	</head>
+	<body>
+		<h1>To-Do List</h1>
+		<form action="#" method="post" id="toDoList">
+			<fieldset id="toDoFieldset">
+				<legend>Add a Thing To-Do</legend>
+				<ul id="errors"></ul>
+				<ul id="questions">
+				<li id="select"><label for="category">*Select Category:</label></li>
+					<li>Activity Info:
+						<ul>
+							<li><label for="name">*Name of Activity:</label><input type="text" id="name"/></li>
+							<li>Requires Assistance:
+								<ul>
+									<li><input type="radio" value="Yes" id="Yes" name = "help" /><label for="Yes">Yes</label> </li>
+									<li><input type="radio" value="No" id="No" name = "help" /><label for="No">No</label> </li>
+								</ul>
+							</li>
+							<li><label for="activityDuration">Activity Duration:</label><input type="range" min="0" max="48" id="time"/></li>
+							<li><label for="dateDue">Date Due</label><input type="date" id="date"/></li>
+							<li><label for="notes">Notes:</label><textarea id="notes"></textarea></li>
+						</ul>
+					</li>
+				</ul>	
+				<!-- Submit Button -->
+				<input type="submit" value="Save To-Do List" id="submit"/>
+			</fieldset>
+		</form>
+	</body>
+	<footer>
+		<!-- cleared store data and display data links -->
+		<a href="#" id="clear"> Clear Stored Data</a>
+		<a href="#" id="displayData"> Display Data</a>
+	</footer>
+	<script src="json.js" type="text/javascript"></script>
+	<script src="main.js" type="text/javascript"></script>
+</html>
