@@ -26,7 +26,7 @@ var json = {
 		"time": ["Duration:", "4"],
 		"date": ["Date Due:", "2012-01-27"],
 		"notes": ["Notes:", "Starts @ 1600"]		
-	}
+	},
 	"activity4": {
 		"category": ["Group:", "Errand"],
 		"name": ["Name of Activity:", "Grocery Shopping"],
@@ -50,7 +50,7 @@ var json = {
 		"time": ["Duration:", "4"],
 		"date": ["Date Due:", "2012-01-27"],
 		"notes": ["Notes:", "Starts @ 1600"]		
-	}
+	},
 	"activity7": {
 		"category": ["Group:", "Errand"],
 		"name": ["Name of Activity:", "Grocery Shopping"],
@@ -74,7 +74,7 @@ var json = {
 		"time": ["Duration:", "4"],
 		"date": ["Date Due:", "2012-01-27"],
 		"notes": ["Notes:", "Starts @ 1600"]		
-	}
+	},
 	"activity10": {
 		"category": ["Group:", "Errand"],
 		"name": ["Name of Activity:", "Grocery Shopping"],
@@ -98,7 +98,7 @@ var json = {
 		"time": ["Duration:", "4"],
 		"date": ["Date Due:", "2012-01-27"],
 		"notes": ["Notes:", "Starts @ 1600"]		
-	}
+	},
 	"activity13": {
 		"category": ["Group:", "Errand"],
 		"name": ["Name of Activity:", "Grocery Shopping"],
@@ -122,7 +122,7 @@ var json = {
 		"time": ["Duration:", "4"],
 		"date": ["Date Due:", "2012-01-27"],
 		"notes": ["Notes:", "Starts @ 1600"]		
-	}
+	},
 	"activity16": {
 		"category": ["Group:", "Errand"],
 		"name": ["Name of Activity:", "Grocery Shopping"],
@@ -146,7 +146,7 @@ var json = {
 		"time": ["Duration:", "4"],
 		"date": ["Date Due:", "2012-01-27"],
 		"notes": ["Notes:", "Starts @ 1600"]		
-	}
+	},
 	"activity19": {
 		"category": ["Group:", "Errand"],
 		"name": ["Name of Activity:", "Grocery Shopping"],
@@ -162,6 +162,6 @@ var json = {
 		"time": ["Duration:", "6"],
 		"date": ["Date Due:", "2012-01-29"],
 		"notes": ["Notes:", "Buy pull down ladder from Lowes"]		
-	},
+	}
 			
 }
