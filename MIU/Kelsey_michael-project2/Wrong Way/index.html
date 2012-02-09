@@ -38,7 +38,7 @@
 		
 		<div data-role="controlgroup">
 			<a href="#viewlist" data-role="button" data-icon="arrow-r" data-iconpos="right">View To-Do List</a>
-			<a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right">Cross something off the list</a>
+			<a href="#slideshow" data-role="button" data-icon="arrow-r" data-iconpos="right">Slideshow</a>
 			<a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right">Edit the To-Do List</a>
 		</div>
 	</div>
@@ -85,59 +85,74 @@
 				<a href="#chores" data-role="button" data-icon="arrow-r" data-iconpos="right">Chores</a>
 				<a href="#errands" data-role="button" data-icon="arrow-r" data-iconpos="right">Errands</a>
 				<a href="#metime" data-role="button" data-icon="arrow-r" data-iconpos="right">Me-Time</a>
-			</div>	
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="chores" data-add-back-btn="true">
+	
+		<div data-role="header" data-posistion="fixed">
+			<h1>To-Do List App</h1>
+		</div>
+		<div data-role="content">
 			<ul data-role="listview" data-filter="true">
 				<li>
-					<img src="images/Chore.png" />
-					<p>Group:Chore</p>
 					<p>Name of Activity:Add attic access</p>
 					<p>Duration:6 hrs</p>
 					<p>Date Due:2012-01-29</p>
 					<p>Notes:Buy from Lowes </p>
 				</li>
 				<li>
-					<img src="images/Errand.png" />
-					<p>Group:Errand</p>
+					<p>Name of Activity: Mow Lawn</p>
+					<p>Duration: 3 hrs</p>
+					<p>Date Due:2012-02-23</p>
+					<p>Notes:</p>
+				</li>
+		</div>
+	</div>
+	<div data-role="page" id="errands" data-add-back-btn="true">
+	
+		<div data-role="header" data-posistion="fixed">
+			<h1>To-Do List App</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-filter="true">
+				<li>
 					<p>Name of Activity:Grocery Shopping</p>
 					<p>Duration: 2 hrs</p>
 					<p>Date Due:2012-01-30 </p>
 					<p>Notes:Items for BBQ</p>
 				</li>
 				<li>
-					<img src="images/Me-Time.png" />
-					<p>Group:Me-Time</p>
+					<p>Name of Activity:Pick up present</p>
+					<p>Duration: 1 hrs</p>
+					<p>Date Due: 2012-03-02</p>
+					<p>Notes: Wife's Birthday</p>
+				</li>
+		</div>
+	</div>
+	<div data-role="page" id="metime" data-add-back-btn="true">
+	
+		<div data-role="header" data-posistion="fixed">
+			<h1>To-Do List App</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-filter="true">
+				<li>
 					<p>Name of Activity: BBQ</p>
 					<p>Duration:5 hrs</p>
 					<p>Date Due:2012-01-30</p>
 					<p>Notes:Time to PARTY!</p>
 				</li>
 				<li>
-					<img src="images/Chore.png" />
-					<p>Group:Chore</p>
-					<p>Name of Activity: Mow Lawn</p>
-					<p>Duration: 3 hrs</p>
-					<p>Date Due:2012-02-23</p>
-					<p>Notes:</p>
-				</li>
-				<li>
-					<img src="images/Me-Time.png" />
-					<p>Group:Me-Time</p>
 					<p>Name of Activity:My Birthday</p>
 					<p>Duration:24 hrs</p>
 					<p>Date Due:2012-02-26</p>
 					<p>Notes:HAPPY BIRTHDAY!</p>
 				</li>
-				<li>
-					<img src="images/Errand.png" />
-					<p>Group:Errand</p>
-					<p>Name of Activity:Pick up present</p>
-					<p>Duration: 1 hrs</p>
-					<p>Date Due: 2012-03-02</p>
-					<p>Notes: Wife's Birthday</p>
-				</li>
-			</ul>
-		</div>	
-	</div>		
+		</div>
+	</div>
+
+	
 	<div data-role="page" id="listInlay" data-add-back-btn="true">
 	
 		<div data-role="header" data-posistion="fixed">
