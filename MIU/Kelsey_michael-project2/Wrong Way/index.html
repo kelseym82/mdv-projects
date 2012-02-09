@@ -22,6 +22,7 @@
 		
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 
 </head>
 <body>
@@ -214,6 +215,20 @@
 			</div>	
 		</div>	
 	</div>
+	
+	<div data-role="page" id="slideshow" data-add-back-btn="true">
+		<div id="gallery">
+			<div id="panel">
+				<img id="largeImage" src="images/errand.png"/>
+			</div>
+			<div id="thumbs">
+				<img src="images/errand.png" alt="Errands" />
+		        <img src="images/chore.png" alt="Chores" />
+		        <img src="images/me-time.png" alt="Me-Time" />
+			</div>
+		</div>	
+	</div>
+
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>

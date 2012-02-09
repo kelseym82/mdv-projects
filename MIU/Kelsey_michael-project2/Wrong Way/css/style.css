@@ -1,1 +1,23 @@
 // write your CSS in here
+
+#thumbs { padding-top: 10px; overflow: hidden; }
+#thumbs img, #largeImage {
+ border: 1px solid gray;
+ padding: 4px;
+ background-color: white;
+ cursor: pointer;
+}
+#thumbs img {
+ float: left;
+ margin-right: 6px;
+}
+#description {
+ background: black;
+ color: white;
+ position: absolute;
+ bottom: 0;
+ padding: 10px 20px;
+ width: 525px;
+ margin: 5px;
+}
+#panel { position: relative; }
