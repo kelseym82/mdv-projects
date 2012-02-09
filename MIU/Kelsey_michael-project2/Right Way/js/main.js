@@ -267,10 +267,10 @@ window.addEventListener("DOMContentLoaded", function(){
 	//displayLink.addEventListener("click", getData);
 	//var clearLink = $('clear');
 	//clearLink.addEventListener("click", clearLocal);
-	var viewList = $('viewList');
-	displayLink.addEventListener("click", makeSortedList);
-	var save = $('submit');
-	save.addEventListener("click", validate);
+	//var viewList = $('viewList');
+	//viewList.addEventListener("click", makeSortedList);
+	//var save = $('submit');
+	//save.addEventListener("click", validate);
 
 
 });
