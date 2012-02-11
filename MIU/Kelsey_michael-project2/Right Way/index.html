@@ -24,7 +24,7 @@
 	<script src="js/libs/modernizr.custom.min.js"></script>
 
 </head>
-<body>
+
 
 	<div data-role="page" id="home">
 	
@@ -32,14 +32,15 @@
 			<h1>To-Do List App</h1>
 		</div>
 		
+		
 		<div data-role="content">
-			<p><a href="#additem" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e">Add a Thing To-Do</a></p>
+			<p style="padding-left:35px;"><a href="#additem"><img src="images/stickynote.png" /></a></p>
 		</div>
 		
 		<div data-role="controlgroup">
 			<a href="#viewlist" data-role="button" data-icon="arrow-r" data-iconpos="right">View To-Do List</a>
-			<a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right">Cross something off the list</a>
-			<a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right">Edit the To-Do List</a>
+			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">Cross something off the list</a>
+			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">Edit the To-Do List</a>
 		</div>
 	</div>
 	
@@ -121,7 +122,16 @@
 			</ul>
 		</div>	
 	</div>		
-
+	
+	<div data-role="page" id="uc" data-add-back-btn="true">
+		
+		<div data-role="content">
+		
+			<p style="center"><img src="images/Underconstruction.png" /></p>
+		
+		</div>
+		
+	</div>
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
