@@ -21,3 +21,5 @@
  margin: 5px;
 }
 #panel { position: relative; }
+
+label.error{display: block; margin: 10px 0; color: #cc0000;}
