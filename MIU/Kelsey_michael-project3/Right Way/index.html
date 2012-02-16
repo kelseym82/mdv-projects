@@ -51,12 +51,12 @@
 		</div>
 		
 		<div data-role="content">
-			<form action="" method="post" id="form">
+			<form action="" method="post" id="aiform">
 				<p>*Required Items</p>
 				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup">	
 						<legend>*Select Category:</legend>
-						<input type="radio" value="Chore" name="category" id="category1" />
+						<input type="radio" value="Chore" name="category" id="category1" class="required" />
 						<label for="category1">Chore</label>
 						<input type="radio" value="Errand" name="category" id="category2" />
 						<label for="category2">Errand</label>
@@ -66,7 +66,7 @@
 				</div>
 				<div data-role="fieldcontain">
 					<label for="name">*Name of Activity:</label>
-					<input type="text" name="name" id="name"/>
+					<input type="text" name="name" id="name" class="required"/>
 				</div>
 				<div data-role="fieldcontain">
 					<label for="activityDuration">Activity Duration (hrs):</label>
@@ -74,7 +74,7 @@
 				</div>
 				<div data-role="fieldcontain">
 					<label for="dateDue">*Date Due:</label>
-					<input type="date" name="date" id="date"/>
+					<input type="date" name="date" id="date" />
 				</div>
 				<div data-role="fieldcontain">
 					<label for="notes">Notes:</label>
@@ -82,9 +82,9 @@
 				</div>
 				<div data-role="fieldcontain">
 					<small><input type="reset" value="Reset Form" data-theme="a"/></small>
+					<big><input type="submit" value="Save to 'To-Do List'" id="submit" data-theme="b"/></big>
 				</div>
 		    </form>
-			<big><input type="submit" value="Save to 'To-Do List'" id="submit" data-theme="b"/></big>
 		</div>
 	</div>
 	
@@ -159,6 +159,7 @@
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
