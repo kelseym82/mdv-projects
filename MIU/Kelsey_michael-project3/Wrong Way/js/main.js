@@ -1,8 +1,32 @@
-//Project 2
+//Project 3
 //MIU
 //Michael Kelsey
 
+$(document).ready(function(){
+	
+	var aiform = $('#aiform');
+	
+	aiform.validate({
+		rules: {
+			category: "required",
+			name: "required"
+		},
+		messages: {
+			category: "Please Select a Category",
+			name: "Please Name Your Activity"
+		},
+		
+		errorPlacement: function(error, element){
+			error.insertAfter("p");
+		}
+	});
 
+});
+
+
+
+
+/*
 window.addEventListener("DOMContentLoaded", function(){
 
 	function $(x){
@@ -276,4 +300,4 @@ window.addEventListener("DOMContentLoaded", function(){
 	//save.addEventListener("click", validate);
 
 
-});
+});*/

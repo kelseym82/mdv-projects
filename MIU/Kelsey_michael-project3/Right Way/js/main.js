@@ -15,7 +15,16 @@ $(document).ready(function(){
 		submitHandler: function(){
 			var data = aiform.serializeArray();
 			parseForm(data);
+		},
+		rules: {
+			category: "required",
+			name: "required"
+		},
+		messages: {
+			category: "Please Select a Category",
+			name: "Please Name Your Activity"
 		}
+
 	});
 
 });

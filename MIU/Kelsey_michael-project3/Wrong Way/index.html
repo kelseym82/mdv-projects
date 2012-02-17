@@ -51,16 +51,39 @@
 		</div>
 		
 		<div data-role="content">
-			<div data-role="fieldcontain">
+			<form action="" method="post" id="aiform">
 				<p>*Required Items</p>
-				<ul id="errors"></ul>
-				<li id="select"><label for="category">*Select Category:</label></li>
-				<li><label for="name">*Name of Activity:</label><input type="text" id="name"/></li>
-				<li><label for="activityDuration">Activity Duration (hrs):</label><input type="range" min="0" max="24" id="time"/></li>
-				<li><label for="dateDue">Date Due:</label><input type="date" name="date" id="date"/></li>
-				<li><label for="notes">Notes:</label><input type="text" name="notes" id="notes" value="" /></li>
-			</div>
-			<input type="submit" value="Save to 'To-Do List'" id="submit"/>
+				<div data-role="fieldcontain">
+					<big><input type="submit" value="Save to 'To-Do List'" id="submit" data-theme="b"/></big>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="category">Category:</label>
+					<select name="category" id="category">
+						<option value="Chore">Chore</option>
+						<option value="Errand">Errand</option>
+						<option value="Me-Time">Me-Time</option>
+					</select>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="name">*Name of Activity:</label>
+					<input type="text" name="name" id="name" class="required"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="activityDuration">Activity Duration (hrs):</label>
+					<input type="range" min="0" max="24" value="24" name="time" id="time"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="when">When:</label>
+					<input type="date" name="when" id="when"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="notes">Notes:</label>
+					<textarea></textarea>
+				</div>
+				<div data-role="fieldcontain">
+					<small><input type="reset" value="Reset Form" data-theme="a"/></small>
+				</div>
+		    </form>
 		</div>
 	</div>
 	
@@ -302,6 +325,7 @@
 
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
