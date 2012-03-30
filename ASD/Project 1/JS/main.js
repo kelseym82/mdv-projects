@@ -1,5 +1,5 @@
-//Project 4
-//Visual Frameworks (VFW) 1201
+//Project 1
+//ASD 1204
 //Michael Kelsey
 
 
@@ -12,6 +12,7 @@ $(function(){
 	
 	
 	//Formfield Function
+	
 	function makeCategory(){
 		var formTag = $("form"),
 			selectLi = $('select'),
