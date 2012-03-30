@@ -1,34 +1,9 @@
-//Project 3
-//MIU
+//Project 4
+//Visual Frameworks (VFW) 1201
 //Michael Kelsey
 
-$(document).ready(function(){
-	
-	var aiform = $('#aiform');
-	
-	aiform.validate({
-		invalidHandler: function(form, validator){},
-		submitHandler: function(){
-			var data = aiform.serializeArray();
-			parseForm(data);
-		},
-		rules: {
-			category: "required",
-			name: "required"
-		},
-		messages: {
-			category: "Please Select a Category",
-			name: "Please Name Your Activity"
-		}
 
-	});
-
-});
-
-
-
-/*
-window.addEventListener("DOMContentLoaded", function(){
+$(function(){
 
 	function $(x){
 		var theElement = document.getElementById(x);
@@ -38,7 +13,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	//Formfield Function
 	function makeCategory(){
-		var formTag = document.getElementsByTagName("controlgroup"),
+		var formTag = document.getElementsByTagName("form"),
 			selectLi = $('select'),
 			makeSelect = document.createElement('select');
 			makeSelect.setAttribute("id", "category");
@@ -52,7 +27,15 @@ window.addEventListener("DOMContentLoaded", function(){
 		selectLi.appendChild(makeSelect);
 	}
 	
-
+	//find the value of radio
+	function getSelectedRadio(){
+		var radios = document.forms[0].help;
+		for(var i = 0; i<radios.length; i++){
+			if(radios[i].checked){
+				helpValue = radios[i].value;
+			}	
+		}
+	}
 	
 	//storedata function
 	function storeData(key){
@@ -62,6 +45,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			id = key;
 		}
 		//This gathers the form data and stores it in an object
+		getSelectedRadio();
 		var item			= {};
 			item.category	= ["Category:", $('category').value];
 			item.name 		= ["Name of Activity:", $('name').value];
@@ -171,7 +155,6 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 		$('time').value = item.time[1];
 		$('date').value = item.date[1];
-		$('help').value = item.help[1];
 		$('notes').value = item.notes[1];
 		
 		//Remove the initial listener from the input 'save' button.
@@ -257,45 +240,14 @@ window.addEventListener("DOMContentLoaded", function(){
 	makeCategory();
 	
 	
-	//Sort the List
-	var makeSortedList = function() {
-	    var myList, callbackFunc;
-	    myList = [];
-	    _.each(_.keys(localStorage), function(key) {
-	      var myObj, value;
-	      value = localStorage.getItem(key);
-	      myObj = JSON.parse(value);
-	      myObj.key = key;
-	      myList.push(myObj);
-	    });
-	    callbackFunc = function(a, b) {
-	      if (a.yourObjectsPropertyToSortBy === b.date) {
-	        if (a.yourObjectsPropertyToSortBy === b.date) return 0;
-	        return (a.yourObjectsPropertyToSortBy < b.date ? -1 : 1);
-	      }
-	      if (a.yourObjectsPropertyToSortBy < b.date) {
-	        return -1;
-	      } else {
-	        return 1;
-	      }
-	    };
-	    return myList.sort(callbackFunc);
-    };
-
 	
 	
-	
-	
-	
-	
-	//var displayLink = $('displayData');
-	//displayLink.addEventListener("click", getData);
-	//var clearLink = $('clear');
-	//clearLink.addEventListener("click", clearLocal);
-	//var viewList = $('viewList');
-	//viewList.addEventListener("click", makeSortedList);
-	//var save = $('submit');
-	//save.addEventListener("click", validate);
+	var displayLink = $('displayData');
+	displayLink.addEventListener("click", getData);
+	var clearLink = $('clear');
+	clearLink.addEventListener("click", clearLocal);
+	var save = $('submit');
+	save.addEventListener("click", validate);
 
 
-});*/
+});
