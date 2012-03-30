@@ -1,0 +1,172 @@
+<!doctype html>
+<!Kelsey, Michael J.>
+<!FullSail ASD Project 1>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Mobile Site Template</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.swatch.i.css"/>
+		
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	
+
+	<div data-role="page" id="home" data-theme="i">
+	
+		<div data-role="header" data-posistion="fixed" data-theme="i">
+			<h1><img src="images/logo.png"/></h1>
+		</div>
+		
+		
+		<div data-role="content">
+			<p style="padding-left:35px;"><a href="#additem"><img src="images/stickynote.png" /></a></p>
+		</div>
+		
+		<div data-role="controlgroup">
+			<a href="#viewlist" data-role="button" data-icon="arrow-r" data-iconpos="right">View To-Do List</a>
+			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">Cross something off the list</a>
+			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">Edit the To-Do List</a>
+		</div>
+	</div>
+	
+	<div data-role="page" id="additem" data-theme="i" data-add-back-btn="true">
+
+		<div data-role="header" data-posistion="fixed" data-theme="i" >
+			<h1><img src="images/logo.png"/></h1>
+		</div>
+		
+		<div data-role="content">
+			<form action="" method="post" id="aiform">
+				<p>*Required Items</p>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">	
+						<legend>*Select Category:</legend>
+						<input type="radio" value="Chore" name="category" id="category1" class="required" />
+						<label for="category1">Chore</label>
+						<input type="radio" value="Errand" name="category" id="category2" />
+						<label for="category2">Errand</label>
+						<input type="radio" value="Me-Time" name="category" id="category3" />
+						<label for="category3">Me-Time</label>
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="name">*Name of Activity:</label>
+					<input type="text" name="name" id="name" class="required"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="activityDuration">Activity Duration (hrs):</label>
+					<input type="range" min="0" max="24" value="8" name="time" id="time"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="when">When:</label>
+					<input type="datetime-local" name="when" id="when" />
+				</div>
+				<div data-role="fieldcontain">
+					<label for="notes">Notes:</label>
+					<textarea></textarea>
+				</div>
+				<div data-role="fieldcontain">
+					<big><input type="submit" value="Save to 'To-Do List'" id="submit" data-theme="b"/></big>
+ 					<small><input type="reset" value="Reset Form" data-theme="a"/></small>
+				</div>
+		    </form>
+		</div>
+	</div>
+	
+	<div data-role="page" id="viewlist" data-add-back-btn="true" data-theme="i">
+	
+		<div data-role="header" data-posistion="fixed" data-theme="i" >
+			<h1><img src="images/logo.png"/></h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-filter="true">
+				<li>
+					<img src="images/Chore.png" />
+					<p>Group:Chore</p>
+					<p>Name of Activity:Add attic access</p>
+					<p>Duration:6 hrs</p>
+					<p>Date Due:2012-01-29</p>
+					<p>Notes:Buy from Lowes </p>
+				</li>
+				<li>
+					<img src="images/Errand.png" />
+					<p>Group:Errand</p>
+					<p>Name of Activity:Grocery Shopping</p>
+					<p>Duration: 2 hrs</p>
+					<p>Date Due:2012-01-30 </p>
+					<p>Notes:Items for BBQ</p>
+				</li>
+				<li>
+					<img src="images/Me-Time.png" />
+					<p>Group:Me-Time</p>
+					<p>Name of Activity: BBQ</p>
+					<p>Duration:5 hrs</p>
+					<p>Date Due:2012-01-30</p>
+					<p>Notes:Time to PARTY!</p>
+				</li>
+				<li>
+					<img src="images/Chore.png" />
+					<p>Group:Chore</p>
+					<p>Name of Activity: Mow Lawn</p>
+					<p>Duration: 3 hrs</p>
+					<p>Date Due:2012-02-23</p>
+					<p>Notes:</p>
+				</li>
+				<li>
+					<img src="images/Me-Time.png" />
+					<p>Group:Me-Time</p>
+					<p>Name of Activity:My Birthday</p>
+					<p>Duration:24 hrs</p>
+					<p>Date Due:2012-02-26</p>
+					<p>Notes:HAPPY BIRTHDAY!</p>
+				</li>
+				<li>
+					<img src="images/Errand.png" />
+					<p>Group:Errand</p>
+					<p>Name of Activity:Pick up present</p>
+					<p>Duration: 1 hrs</p>
+					<p>Date Due: 2012-03-02</p>
+					<p>Notes: Wife's Birthday</p>
+				</li>
+			</ul>
+		</div>	
+	</div>		
+	
+	<div data-role="page" id="uc" data-add-back-btn="true" data-theme="i">
+	
+		<div data-role="header" data-posistion="fixed" data-theme="i" >
+			<h1><img src="images/logo.png"/></h1>
+		</div>
+	
+		<div data-role="content">
+		
+			<p style="center"><img src="images/Underconstruction.png" /></p>
+		
+		</div>
+		
+	</div>
+	<!-- JavaScript under here -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
