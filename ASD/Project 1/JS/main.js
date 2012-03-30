@@ -6,14 +6,14 @@
 $(function(){
 
 	function $(x){
-		var theElement = document.getElementById(x);
+		var theElement = document.getElementById(x);//if i turn this to $(x) it breaks the page.
 		return theElement;
 	}
 	
 	
 	//Formfield Function
 	function makeCategory(){
-		var formTag = document.getElementsByTagName("form"),
+		var formTag = $("form"),
 			selectLi = $('select'),
 			makeSelect = document.createElement('select');
 			makeSelect.setAttribute("id", "category");
