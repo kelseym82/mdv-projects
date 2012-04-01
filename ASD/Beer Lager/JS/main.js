@@ -9,11 +9,12 @@ $(document).ready(function(){
 	var contentMainVar = null;  
 	var ftrMainVar = null;  
 	var contentTransitionVar = null;  
-	var stateLabelVar = null;  
-	var whatLabelVar = null;  
-	var stateVar = null;  
-	var whatVar = null;  
-	var form1var = null;  
+	var nameVar = null;  
+	var wishlistVar = null;  
+	var locationVar = null;  
+	var starVar = null;
+	var commentsVar = null;  
+	var formVar = null;  
 	var confirmationVar = null;  
 	var contentDialogVar = null;  
 	var hdrConfirmationVar = null;  
@@ -31,10 +32,17 @@ $(document).ready(function(){
 	hdrMainVar = $('#hdrMain');
 	contentMainVar = $('#contentMain');
 	ftrMainVar = $('#ftrMain');
+	nameVar = $('#name');
+	wishlistVar = $('#wishlist');
+	locationVar = $('#location');
+	starVar = $('#star');
+	commentsVar = $('#comments');
+	formVar = $('#form');
 	contentTransitionVar = $('#contentTransition');
 	confirmationVar = $('#confirmation');
 	contentDialogVar = $('#contentDialog');
-	
-	
-	
+	hdrConfirmationVar = $('#hdrConfirmation');
+	contentConfirmationVar = $('#contentConfirmation');
+	ftrConfirmationVar = $('#ftrConfirmation');
+	inputMapVar = $('#input[name*="_r"]');
 });

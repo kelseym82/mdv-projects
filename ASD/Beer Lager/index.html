@@ -57,27 +57,27 @@
 		</div>
 		
 		<div data-role="content"  id="contentMain" name="contentMain">
-			<form action="" method="post" id="aiform">
+			<form action="" method="post" id="form">
 				
 				<div data-role="fieldcontain" >
-					<label for="name">Name of Beer:</label>
-					<input type="text" name="name" id="name" class="required" data-mini="true"/>
+					<label id="nameDiv" for="name">Name of Beer:</label>
+					<input type="text" name="name" id="name_r" data-mini="true"/>
 				</div>
 				<div>
-					<label for="wishlist">Add Beer to wish list:</label>
-					<select name="slider" id="flip-a" data-role="slider" data-mini="true">
+					<label id="wishlistDiv" for="wishlist">Add Beer to wish list:</label>
+					<select name="wishlist" id="wishlist" data-role="slider" data-mini="true">
 						<option value="No">No</option>
 						<option value="Yes">Yes</option>
 					</select>
 				</div>
 				</br>
 				<div>
-					<label for="location">Brewery Location:</label>
-					<input type="text" name="location" id="location" class="required" data-mini="true"/>
+					<label id="locationDiv" for="location">Brewery Location:</label>
+					<input type="text" name="location" id="location" data-mini="true"/>
 				</div>
 				<div>
-					<label for="select-choice-0" class="select">Rating:</label>
-					<select name="select-choice-0" id="select-choice-1">
+					<label id="starDiv" for="star" class="select">Rating:</label>
+					<select name="star" id="star_r">
 					   <option value="0">Please Select a Rating</option>
 					   <option value="1">1 Star</option>
 					   <option value="2">2 Star</option>
@@ -87,8 +87,8 @@
 					</select>
 				</div>
 				<div>
-					<label for="notes">Comments:</label>
-					<textarea></textarea>
+					<label id="commentsDiv" for="comments">Comments:</label>
+					<textarea name="comments" id="comments"></textarea>
 				</div>
 				<div data-role="fieldcontain">
 					<big><input type="submit" value="Submit" id="submit" data-theme="b"/></big>
