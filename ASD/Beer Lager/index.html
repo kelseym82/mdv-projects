@@ -19,26 +19,127 @@
 	<meta http-equiv="cleartype" content="on">
 	
 	<!-- StyleSheets under here -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-	<link rel="stylesheet" href="style.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.swatch.i.css"/>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.swatch.i.css"/>
 		
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 
 </head>
 <body>
-	<h1>Beer Lager</h1>
+<body>
 	
-	<p><b>beer</b> /bi(ə)r/ - An alcoholic drink made from yeast-fermented malt flavored with hops.</p>
+
+	<div data-role="page" id="home" data-theme="i">
 	
-	<h2>Get Started Now</h2>
+		<div data-role="header" id="hdrHome" data-posistion="fixed" data-theme="i" data-nobackbtn="true">
+			<h1>Beer Lager</h1>
+		</div>
+		
+		
+		<div data-role="content">
+			<p style="padding-left:35px;"><a href="#addbeer">Add a beer</a></p>
+		</div>
+		
+		<div data-role="controlgroup">
+			<a href="#addbeer" data-role="button" data-icon="arrow-r" data-iconpos="right">Add a Beer</a>
+			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">View List of Rated Beers</a>
+			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">View Wish List</a>
+			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">Beer University</a>
+		</div>
+	</div>
 	
-	<a href="addbeer.html">Add a Beer</a>
-	<a href="beeddatabase.html">View Saved Beers</a>
+	<div data-role="page" id="addbeer" data-theme="i">
+		<!-- ======= Main Form Page Starts Here ========= -->
+		<div data-role="header" id="hdrMain" name="hdrMain" data-theme="i" data-nobackbtn="true">
+			<h1><img src="images/logo.png"/></h1>
+		</div>
+		
+		<div data-role="content"  id="contentMain" name="contentMain">
+			<form action="" method="post" id="aiform">
+				
+				<div data-role="fieldcontain" >
+					<label for="name">Name of Beer:</label>
+					<input type="text" name="name" id="name" class="required" data-mini="true"/>
+				</div>
+				<div>
+					<label for="wishlist">Add Beer to wish list:</label>
+					<select name="slider" id="flip-a" data-role="slider" data-mini="true">
+						<option value="No">No</option>
+						<option value="Yes">Yes</option>
+					</select>
+				</div>
+				</br>
+				<div>
+					<label for="location">Brewery Location:</label>
+					<input type="text" name="location" id="location" class="required" data-mini="true"/>
+				</div>
+				<div>
+					<label for="select-choice-0" class="select">Rating:</label>
+					<select name="select-choice-0" id="select-choice-1">
+					   <option value="0">Please Select a Rating</option>
+					   <option value="1">1 Star</option>
+					   <option value="2">2 Star</option>
+					   <option value="3">3 Star</option>
+					   <option value="4">4 Star</option>
+					   <option value="5">5 Star</option>
+					</select>
+				</div>
+				<div>
+					<label for="notes">Comments:</label>
+					<textarea></textarea>
+				</div>
+				<div data-role="fieldcontain">
+					<big><input type="submit" value="Submit" id="submit" data-theme="b"/></big>
+ 					<small><input type="reset" value="Reset Form" id="reset" data-theme="a"/></small>
+				</div>
+		    </form>
+		</div>
+		<div data-role="footer" id="ftrMain" name="ftrMain"></div>
+		<!-- ======= Main Form Page Ends Here ========= -->
+		<!-- ======= Dialog Form Page Starts Here ========= -->
+		<div align="CENTER" data-role="content" id="contentDialog" name="contentDialog">
+			<!-- Insert Dialog Here --><p>Dialog</p>
+		</div>
+		<!-- ======= Dialog Form Page Ends Here ========= -->
+		<!-- ======= Transition Form Starts Ends Here ========= -->
+		<div data-role="content" id="contentTransition" name="contentTransition">
+			<!-- Insert Transition Here --><p>Transition</p>
+		</div>
+		<!-- ======= Transition Form Page Ends Here ========= -->
+		<!-- ======= Confirmation Form Page Starts Here ========= -->
+		<div data-role="header" id="hdrConfirmation" name="hdrConfirmation" data-theme="i" data-nobackbtn="true"></div>
+		<div data-role="content" id="contentConfirmation" name="contentConfirmation">
+			<!-- Insert Confirmation Here --><p>Confirmation</p>
+		</div>
+		<div data-role="footer" id="ftrConfirmation" name="ftrConfirmation"></div>
+		<!-- ======= Confirmation Form Page Ends Here ========= -->
+	</div><!-- The Add a Beer Page Ends Here -->
+	
+	<div data-role="page" id="viewlist" data-add-back-btn="true" data-theme="i">
+	
+		<div data-role="header" data-posistion="fixed" data-theme="i" >
+			<h1><img src="images/logo.png"/></h1>
+		</div>
+	</div>		
+	
+	<div data-role="page" id="uc" data-add-back-btn="true" data-theme="i">
+	
+		<div data-role="header" data-posistion="fixed" data-theme="i" >
+			<h1><img src="images/logo.png"/></h1>
+		</div>
+	
+		<div data-role="content">
+		
+			<p style="center"><img src="images/Underconstruction.png" /></p>
+		
+		</div>
+		
+	</div>
 	<!-- JavaScript -->
-	<script type="text/javascript" src="js/libs/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="js/libs/jquery.mobile-1.0.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
 	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
