@@ -2,3 +2,112 @@
 <!-- Beer Lager Application -->
 <!-- Author: Michael J. Kelsey -->
 <!-- For: Full Sail University - ASD 1204-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Beer Lager</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.swatch.a.css"/>
+		
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	<div data-role="page" id="additem" data-theme="a" data-add-back-btn="true">
+
+		<div data-role="header" data-posistion="fixed" data-theme="i" >
+			<h1><img src="images/logo.png"/></h1>
+		</div>
+		
+		<div data-role="content">
+			<form action="" method="post" id="aiform">
+				<p>*Required Items</p>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">	
+						<legend>*Select Category:</legend>
+						<input type="radio" value="Chore" name="category" id="category1" class="required" />
+						<label for="category1">Chore</label>
+						<input type="radio" value="Errand" name="category" id="category2" />
+						<label for="category2">Errand</label>
+						<input type="radio" value="Me-Time" name="category" id="category3" />
+						<label for="category3">Me-Time</label>
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="name">*Name of Activity:</label>
+					<input type="text" name="name" id="name" class="required"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="activityDuration">Activity Duration (hrs):</label>
+					<input type="range" min="0" max="24" value="8" name="time" id="time"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="when">When:</label>
+					<input type="datetime-local" name="when" id="when" />
+				</div>
+				<div data-role="fieldcontain">
+					<label for="notes">Notes:</label>
+					<textarea></textarea>
+				</div>
+				<div data-role="fieldcontain">
+					<big><input type="submit" value="Save to 'To-Do List'" id="submit" data-theme="b"/></big>
+ 					<small><input type="reset" value="Reset Form" data-theme="a"/></small>
+				</div>
+		    </form>
+		</div>
+	</div>
+
+
+
+<!--  <div class="block">
+	<div class="done">
+	<b>Thank You!</b>
+	</div>
+		<div class = "form">
+		<form method="post" action="process.php">
+		<div class = "element">
+			<label>Name</label>
+			<input type="text" name="name" class="text" />
+		</div>
+		<div class = "element">
+			<label>Email</label>
+			<input type="text" name="email" class="text" />
+		</div class = "element">
+			<label>Website</label>
+			<input type="text" name="website" class="text" />
+		</div>
+		<div class = "element">
+			<label>Comment</label>
+			<textarea name="content" class="text textarea" /></textarea>
+		</div>
+		<div class= "element">
+		
+			<input type="submit" id="submit"/>
+			<div class="loading"></div>
+		</div>	
+		</form>
+		</div>
+	</div>
+	<div class="clear"></div>-->	
+	<!-- JavaScript -->
+	<script type="text/javascript" src="js/libs/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<!--  <script type="text/javascript" src="js/main.js"></script>-->
+</body>
+</html>
