@@ -25,7 +25,35 @@
 		
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
-
+	<script>
+	//Global Declarations - Assignments made in main.js
+	var hdrMainVar = null;  
+	var contentMainVar = null;  
+	var ftrMainVar = null;  
+	var contentTransitionVar = null;  
+	var nameVar = null;  
+	var wishlistVar = null;  
+	var locationVar = null;  
+	var starVar = null;
+	var commentsVar = null;  
+	var nameLabelVar = null;  
+	var wishlistLabelVar = null;  
+	var locationLabelVar = null;  
+	var starLabelVar = null;
+	var commentsLabelVar = null;  
+	var formVar = null;  
+	var confirmationVar = null;  
+	var contentDialogVar = null;  
+	var hdrConfirmationVar = null;  
+	var contentConfirmationVar = null;  
+	var ftrConfirmationVar = null;  
+	var inputMapVar = null;  
+	
+	// Constants  
+	var MISSING = "missing";  
+	var EMPTY = "";  
+	var NO_STATE = "ZZ";	
+	</script>
 </head>
 <body>
 <body>
@@ -59,24 +87,24 @@
 		<div data-role="content"  id="contentMain" name="contentMain">
 			<form action="" method="post" id="form">
 				
-				<div data-role="fieldcontain" >
-					<label id="nameDiv" for="name">Name of Beer:</label>
+				<div id="nameDiv">
+					<label id="nameLabel" for="name">Name of Beer:</label>
 					<input type="text" name="name" id="name_r" data-mini="true"/>
 				</div>
-				<div>
-					<label id="wishlistDiv" for="wishlist">Add Beer to wish list:</label>
+				<div id="wishlistDiv">
+					<label id="wishlistLabel" for="wishlist">Add Beer to wish list:</label>
 					<select name="wishlist" id="wishlist" data-role="slider" data-mini="true">
 						<option value="No">No</option>
 						<option value="Yes">Yes</option>
 					</select>
 				</div>
 				</br>
-				<div>
-					<label id="locationDiv" for="location">Brewery Location:</label>
+				<div id="locationDiv">
+					<label id="locationLabel" for="location">Brewery Location:</label>
 					<input type="text" name="location" id="location" data-mini="true"/>
 				</div>
-				<div>
-					<label id="starDiv" for="star" class="select">Rating:</label>
+				<div id="starDiv">
+					<label id="starLabel" for="star" class="select">Rating:</label>
 					<select name="star" id="star_r">
 					   <option value="0">Please Select a Rating</option>
 					   <option value="1">1 Star</option>
@@ -86,8 +114,8 @@
 					   <option value="5">5 Star</option>
 					</select>
 				</div>
-				<div>
-					<label id="commentsDiv" for="comments">Comments:</label>
+				<div id="commentsDiv">
+					<label id="commentsLabel" for="comments">Comments:</label>
 					<textarea name="comments" id="comments"></textarea>
 				</div>
 				<div data-role="fieldcontain">
@@ -100,18 +128,20 @@
 		<!-- ======= Main Form Page Ends Here ========= -->
 		<!-- ======= Dialog Form Page Starts Here ========= -->
 		<div align="CENTER" data-role="content" id="contentDialog" name="contentDialog">
-			<!-- Insert Dialog Here --><p>Dialog</p>
+			 <div>Please fill in all required fields before submitting a beer.</div>
+			 <a id="buttonOK" name="buttonOK" href="#page1" data-role="button" data-inline="true">OK</a>
 		</div>
 		<!-- ======= Dialog Form Page Ends Here ========= -->
 		<!-- ======= Transition Form Starts Ends Here ========= -->
 		<div data-role="content" id="contentTransition" name="contentTransition">
-			<!-- Insert Transition Here --><p>Transition</p>
+			 <div align="CENTER"><h4>Your beer is being added. Please Wait</h4></div>
+			 <div align="CENTER"><img id="spin" name="spin" src="images/wait.gif"/></div>
 		</div>
 		<!-- ======= Transition Form Page Ends Here ========= -->
 		<!-- ======= Confirmation Form Page Starts Here ========= -->
 		<div data-role="header" id="hdrConfirmation" name="hdrConfirmation" data-theme="i" data-nobackbtn="true"></div>
 		<div data-role="content" id="contentConfirmation" name="contentConfirmation">
-			<!-- Insert Confirmation Here --><p>Confirmation</p>
+  			<p>A new beer has been added!!.</p> 
 		</div>
 		<div data-role="footer" id="ftrConfirmation" name="ftrConfirmation"></div>
 		<!-- ======= Confirmation Form Page Ends Here ========= -->

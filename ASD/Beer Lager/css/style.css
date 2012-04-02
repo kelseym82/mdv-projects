@@ -1,5 +1,10 @@
 
 
 
-label.error{display: block; margin: 10px 0; color: #cc0000;}
 
+
+
+label.missing {
+	color:#FF0000;
+	font-weight:bold;
+}
