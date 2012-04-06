@@ -44,8 +44,9 @@ $(document).ready(function(){
 
 	});
 	
-	
+//XML DATA LOAD	
 $('#xmlButton').bind('click', function(){
+	$('#beerList').empty();
 	$.ajax({
 		url: 'xhr/data.xml',
 		type: 'GET',
@@ -71,6 +72,45 @@ $('#xmlButton').bind('click', function(){
 	});
 });
 
+
+//CSV DATA LOAD
+$('#csvButton').bind('click', function(){
+	$('#beerList').empty();
+	 $.ajax({
+        type: "GET",
+        url: "xhr/data.csv",
+        dataType: "text",
+        success: function(data) {
+        	var allTextLines = data.split(/\r\n|\n/);
+    		var csvText = allTextLines[0].split(',');
+    		var csvData = [];
+			for (var i=1; i<allTextLines.length; i++) {
+				var data = allTextLines[i].split(',');
+				if (data.length == csvText.length) {
+					var beers = []; 
+					for (var j=0; j<csvText.length; j++) {
+						beers.push(data[j]); 
+					}
+					csvData.push(beers); 
+				}
+				
+			}
+			
+			for (var m=0; m<csvData.length; m++){
+				var beers = csvData[m];
+				$(
+					'<ul data-role="listview">' +	
+						'<li> Name of Beer: '+ beers[0] +'</li>' +
+						'<li> On Wishlist: '+ beers[1] +'</li>' +
+						'<li> Rating: '+ beers[2] +'</li>' +
+						'<li> Comments: '+ beers[3] +'</li>' +
+					'</ul>'	
+				)
+				.appendTo('#beerList');
+			}
+        }		
+	});
+});
 
 });//end ready
 
