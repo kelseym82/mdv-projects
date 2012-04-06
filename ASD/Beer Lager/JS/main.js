@@ -118,7 +118,7 @@ $(document).ready(function(){
 	
 	var form = $('#form');	
 	//FORM VALIDATION/SUBMIT		
-	$('#form').submit(function(){
+	//$('#form').submit(function(){
 		form.validate({
 			rules: {
 				name: 'required',
@@ -131,16 +131,16 @@ $(document).ready(function(){
 			}//end error placement
 		}); //end validate
 
-		var item			= {};
-			item.name 		= ["Name of Beer:", $('#name').value];
-			item.wishlist   = ["Wish List Item:", $('#wishlist').value];
-			item.location 	= ["Brewery Location:", $('#location').value];
-			item.comments 	= ["Comments:", $('#comments').value];
+		//var item			= {};
+		//	item.name 		= ["Name of Beer:", $('#name').value];
+		//	item.wishlist   = ["Wish List Item:", $('#wishlist').value];
+		//	item.location 	= ["Brewery Location:", $('#location').value];
+		//	item.comments 	= ["Comments:", $('#comments').value];
 		//saves data into local storage
-		localStorage.setItem(id, JSON.stringify(item));
-		alert("Saved a Beer!");
+		//localStorage.setItem(id, JSON.stringify(item));
+		//alert("Saved a Beer!");
 
-	});
+	//});
 	
 	//Delete Function
 	var deleteButton = function(){
