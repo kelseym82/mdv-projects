@@ -20,40 +20,11 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/colors.css" />
 	<link rel="stylesheet" href="css/jquery.mobile.swatch.i.css"/>
 		
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
-	<script>
-	//Global Declarations - Assignments made in main.js
-	var hdrMainVar = null;  
-	var contentMainVar = null;  
-	var ftrMainVar = null;  
-	var contentTransitionVar = null;  
-	var nameVar = null;  
-	var wishlistVar = null;  
-	var locationVar = null;  
-	var starVar = null;
-	var commentsVar = null;  
-	var nameLabelVar = null;  
-	var wishlistLabelVar = null;  
-	var locationLabelVar = null;  
-	var starLabelVar = null;
-	var commentsLabelVar = null;  
-	var formVar = null;  
-	var confirmationVar = null;  
-	var contentDialogVar = null;  
-	var hdrConfirmationVar = null;  
-	var contentConfirmationVar = null;  
-	var ftrConfirmationVar = null;  
-	var inputMapVar = null;  
-	
-	// Constants  
-	var MISSING = "missing";  
-	var EMPTY = "";  
-	var NO_STATE = "ZZ";	
-	</script>
 </head>
 <body>
 <body>
@@ -72,7 +43,7 @@
 		
 		<div data-role="controlgroup">
 			<a href="#addbeer" data-role="button" data-icon="arrow-r" data-iconpos="right">Add a Beer</a>
-			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">View List of Rated Beers</a>
+			<a href="#viewlist" data-role="button" data-icon="arrow-r" data-iconpos="right">View List of Rated Beers</a>
 			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">View Wish List</a>
 			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">Beer University</a>
 		</div>
@@ -85,11 +56,11 @@
 		</div>
 		
 		<div data-role="content"  id="contentMain" name="contentMain">
-			<form action="" method="post" id="form" data-ajax="false">
+			<form action="" method="post" id="form" >
 				
 				<div id="nameDiv">
-					<label id="nameLabel" for="name">Name of Beer:</label>
-					<input type="text" name="name" id="name_r" data-mini="true"/>
+					<label id="nameLabel" for="name">Name of Beer*:</label>
+					<input type="text" name="name" id="name" data-mini="true" class="required"/>
 				</div>
 				<div id="wishlistDiv">
 					<label id="wishlistLabel" for="wishlist">Add Beer to wish list:</label>
@@ -103,22 +74,16 @@
 					<label id="locationLabel" for="location">Brewery Location:</label>
 					<input type="text" name="location" id="location" data-mini="true"/>
 				</div>
-				<div id="starDiv">
-					<label id="starLabel" for="star" class="select">Rating:</label>
-					<select name="star" id="star_r">
-					   <option value="0">Please Select a Rating</option>
-					   <option value="1">1 Star</option>
-					   <option value="2">2 Star</option>
-					   <option value="3">3 Star</option>
-					   <option value="4">4 Star</option>
-					   <option value="5">5 Star</option>
-					</select>
+				<div data-role="fieldcontain">
+				<label id="starLabel" for="star">Rate Beer:</label>
+				<div id="star"></div>
 				</div>
+				
 				<div id="commentsDiv">
 					<label id="commentsLabel" for="comments">Comments:</label>
 					<textarea name="comments" id="comments"></textarea>
 				</div>
-				<div data-role="fieldcontain">
+				<div data-role="fieldcontain" id="buttonDiv">
 					<big><input type="submit" value="Submit" id="submit" data-theme="b"/></big>
  					<small><input type="reset" value="Reset Form" id="reset" data-theme="a"/></small>
 				</div>
@@ -126,31 +91,26 @@
 		</div>
 		<div data-role="footer" id="ftrMain" name="ftrMain"></div>
 		<!-- ======= Main Form Page Ends Here ========= -->
-		<!-- ======= Dialog Form Page Starts Here ========= -->
-		<div align="CENTER" data-role="content" id="contentDialog" name="contentDialog">
-			 <div>Please fill in all required fields before submitting a beer.</div>
-			 <a id="buttonOK" name="buttonOK" href="#page1" data-role="button" data-inline="true">OK</a>
-		</div>
-		<!-- ======= Dialog Form Page Ends Here ========= -->
-		<!-- ======= Transition Form Starts Ends Here ========= -->
-		<div data-role="content" id="contentTransition" name="contentTransition">
-			 <div align="CENTER"><h4>Your beer is being added. Please Wait</h4></div>
-			 <div align="CENTER"><img id="spin" name="spin" src="images/wait.gif"/></div>
-		</div>
-		<!-- ======= Transition Form Page Ends Here ========= -->
-		<!-- ======= Confirmation Form Page Starts Here ========= -->
-		<div data-role="header" id="hdrConfirmation" name="hdrConfirmation" data-theme="i" data-nobackbtn="true"></div>
-		<div data-role="content" id="contentConfirmation" name="contentConfirmation">
-  			<p>A new beer has been added!!.</p> 
-		</div>
-		<div data-role="footer" id="ftrConfirmation" name="ftrConfirmation"></div>
-		<!-- ======= Confirmation Form Page Ends Here ========= -->
+		
 	</div><!-- The Add a Beer Page Ends Here -->
 	
 	<div data-role="page" id="viewlist" data-add-back-btn="true" data-theme="i">
 	
 		<div data-role="header" data-posistion="fixed" data-theme="i" >
 			<h1><img src="images/logo.png"/></h1>
+		</div>
+		<div data-role="navbar" data-iconpos="left">
+			<ul>
+				<li class="ui-block-c">
+					<a href="#" data-role="button" id="jsonButton">Load JSON</a>
+				</li>
+				<li class="ui-block-c">
+					<a href="#" data-role="button" id="xmlButton">Load XML</a>
+				</li>
+				<li class="ui-block-c">
+					<a href="#" data-role="button" id="csvButton">Load CSV</a>
+				</li>
+			</ul>
 		</div>
 	</div>		
 	
@@ -171,6 +131,7 @@
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
 	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.raty.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

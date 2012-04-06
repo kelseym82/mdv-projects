@@ -6,6 +6,7 @@
 
 
 <?php
-usleep(int micro_seconds);
+usleep(3000000);
 
+echo('FTREIK1234678');
 ?>

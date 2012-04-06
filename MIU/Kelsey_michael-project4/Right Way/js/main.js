@@ -24,7 +24,7 @@ $(document).ready(function(){
 			category: "Please Select a Category",
 			name: "Please Name Your Activity"
 		}
-
+		
 	});
 
 });
