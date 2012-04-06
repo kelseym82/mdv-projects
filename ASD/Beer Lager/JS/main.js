@@ -52,11 +52,20 @@ $('#xmlButton').bind('click', function(){
 		dataType: 'xml',
 		success: function(xml){
 			$(xml).find("beer").each(function(){
-				var name = $(this).find('name').text();
-				var name = $(this).find('name').text();
-				var name = $(this).find('name').text();
-				var name = $(this).find('name').text();
-				var name = $(this).find('name').text();
+				var name 		= $(this).find('name').text();
+				var wishlist 	= $(this).find('wishlist').text();
+				var rating 		= $(this).find('rating').text();
+				var location	= $(this).find('location').text();
+				var comments	= $(this).find('comments').text();
+				$(
+					'<ul data-role="listview">' +	
+						'<li> Name of Beer: '+ name +'</li>' +
+						'<li> On Wishlist: '+ wishlist +'</li>' +
+						'<li> Rating: '+ rating +'</li>' +
+						'<li> Comments: '+ comments +'</li>' +
+					'</ul>'	
+				)
+				.appendTo('#beerList');
 			});
 		}
 	});
