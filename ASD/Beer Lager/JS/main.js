@@ -18,32 +18,6 @@ $('#star').raty({
 
 
 $(document).ready(function(){	
-	var form = $('#form');	
-	//FORM VALIDATION/SUBMIT		
-	$('#form').submit(function(){
-		form.validate({
-			rules: {
-				name: 'required',
-			},//end rules
-			messages: {
-				name: "Please enter the name of the beer",
-			},//end messages
-			errorPlacement: function(error, element) {
-				error.insertAfter(element.siblings("label"));
-			}//end error placement
-		}); //end validate
-
-		var item			= {};
-			item.name 		= ["Name of Beer:", $('#name').value];
-			item.wishlist   = ["Wish List Item:", $('#wishlist').value];
-			item.location 	= ["Brewery Location:", $('#location').value];
-			item.comments 	= ["Comments:", $('#comments').value];
-		//saves data into local storage
-		localStorage.setItem(id, JSON.stringify(item));
-		alert("Saved a Beer!");
-
-	});
-	
 	//XML DATA LOAD	
 	$('#xmlButton').bind('click', function(){
 		$('#beerList').empty();
@@ -137,6 +111,42 @@ $(document).ready(function(){
 		});
 	});
 
+	//Clear Button
+	$('#dataClear').bind('click',function(){
+		$('#beerList').empty();
+	});
+	
+	var form = $('#form');	
+	//FORM VALIDATION/SUBMIT		
+	$('#form').submit(function(){
+		form.validate({
+			rules: {
+				name: 'required',
+			},//end rules
+			messages: {
+				name: "Please enter the name of the beer",
+			},//end messages
+			errorPlacement: function(error, element) {
+				error.insertAfter(element.siblings("label"));
+			}//end error placement
+		}); //end validate
+
+		var item			= {};
+			item.name 		= ["Name of Beer:", $('#name').value];
+			item.wishlist   = ["Wish List Item:", $('#wishlist').value];
+			item.location 	= ["Brewery Location:", $('#location').value];
+			item.comments 	= ["Comments:", $('#comments').value];
+		//saves data into local storage
+		localStorage.setItem(id, JSON.stringify(item));
+		alert("Saved a Beer!");
+
+	});
+	
+	//Delete Function
+	var deleteButton = function(){
+		var value = localStorage.getItem(this.key);
+		var item = JSON.parse(value);
+	}
 });//end ready
 
 
