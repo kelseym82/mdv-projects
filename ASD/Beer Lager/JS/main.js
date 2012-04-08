@@ -34,11 +34,12 @@ $(document).ready(function(){
 					var comments	= $(this).find('comments').text();
 					$(
 						'<ul data-role="listview">' +	
-							'<li> Name of Beer: '+ name +'</li>' +
-							'<li> On Wishlist: '+ wishlist +'</li>' +
-							'<li> Rating: '+ rating +'</li>' +
-							'<li> Comments: '+ comments +'</li>' +
-						'</ul>'	
+							'<li><b>Name of Beer:</b><a class="editable"> '+ name +'</a></li>' +
+							'<li><b> On Wishlist:</b><a class="editable"> '+ wishlist +'</a></li>' +
+							'<li><b> Rating:</b><a class="editable"> '+ rating +'</a></li>' +
+							'<li><b> Comments:</b><a class="editable"> '+ comments +'</a></li>' +
+							'<a href="#" data-role="button" id="deleteOne">Remove</a>' +
+						'</ul>' 
 					)
 					.appendTo('#beerList');
 				});
@@ -74,10 +75,11 @@ $(document).ready(function(){
 					var beers = csvData[m];
 					$(
 						'<ul data-role="listview">' +	
-							'<li> Name of Beer: '+ beers[0] +'</li>' +
-							'<li> On Wishlist: '+ beers[1] +'</li>' +
-							'<li> Rating: '+ beers[2] +'</li>' +
-							'<li> Comments: '+ beers[3] +'</li>' +
+							'<li><b> Name of Beer:</b><a class="editable"> '+ beers[0] +'</a></li>' +
+							'<li><b> On Wishlist:</b><a class="editable"> '+ beers[1] +'</a></li>' +
+							'<li><b> Rating:</b><a class="editable"> '+ beers[2] +'</a></li>' +
+							'<li><b> Comments:</b><a class="editable"> '+ beers[3] +'</a></li>' +
+							'<a href="#" data-role="button" id="deleteOne">Remove</a>' +
 						'</ul>'	
 					)
 					.appendTo('#beerList');
@@ -99,10 +101,11 @@ $(document).ready(function(){
 					var jsBeer = beer.beerJson[i];
 					$(
 						'<ul data-role="listview">' +	
-							'<li> Name of Beer: '+ jsBeer.name +'</li>' +
-							'<li> On Wishlist: '+ jsBeer.wishlist +'</li>' +
-							'<li> Rating: '+ jsBeer.rating +'</li>' +
-							'<li> Comments: '+ jsBeer.comments +'</li>' +
+							'<li><b> Name of Beer:</b><a class="editable"> '+ jsBeer.name +'</a></li>' +
+							'<li><b> On Wishlist:</b><a class="editable"> '+ jsBeer.wishlist +'</a></li>' +
+							'<li><b> Rating: </b><a class="editable">'+ jsBeer.rating +'</a></li>' +
+							'<li><b> Comments: </b><a class="editable">'+ jsBeer.comments +'</a></li>' +
+							'<a href="#" data-role="button" id="deleteOne">Remove</a>' +
 						'</ul>'	
 					)
 					.appendTo('#beerList');
@@ -111,9 +114,21 @@ $(document).ready(function(){
 		});
 	});
 
+	//Delete Single Item Button
+	$('#deleteOne').live('click', function(){
+		$(this).closest('ul').remove();
+	});
+	
 	//Clear Button
 	$('#dataClear').bind('click',function(){
 		$('#beerList').empty();
+	});
+	
+	//In Line Edit Function
+	$('.editable').inlineEdit({
+		save: function(e, data) {
+			return confirm('Are you sure you want to change to ' + data.value + '?');
+		}
 	});
 	
 	var form = $('#form');	
