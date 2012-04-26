@@ -1,149 +1,123 @@
 //Beer Lager
 //Author: Michael J. Kelsey
 //For: Full Sail - ASD 1204
-	
-
-
-//Star Rating
-$('#star').raty({
-	cancel: true,
-	cancelOff: 'cancel-off-big.png',
-	cancelOn: 'cancel-on-big.png',
-	size: 24,
-	half: true,
-	starHalf: 'star-half-big.png',
-	starOff: 'star-off-big.png',
-	starOn: 'star-on-big.png'
-});
-
 
 $(document).ready(function(){	
-	//XML DATA LOAD	
-	$('#xmlButton').bind('click', function(){
-		$('#beerList').empty();
-		$.ajax({
-			url: 'xhr/data.xml',
-			type: 'GET',
-			dataType: 'xml',
-			success: function(xml){
-				$(xml).find("beer").each(function(){
-					var name 		= $(this).find('name').text();
-					var wishlist 	= $(this).find('wishlist').text();
-					var rating 		= $(this).find('rating').text();
-					var location	= $(this).find('location').text();
-					var comments	= $(this).find('comments').text();
-					$(
-						'<ul data-role="listview">' +	
-							'<li><b>Name of Beer:</b><a class="editable"> '+ name +'</a></li>' +
-							'<li><b> On Wishlist:</b><a class="editable"> '+ wishlist +'</a></li>' +
-							'<li><b> Rating:</b><a class="editable"> '+ rating +'</a></li>' +
-							'<li><b> Comments:</b><a class="editable"> '+ comments +'</a></li>' +
-							'<a href="#" data-role="button" id="deleteOne">Remove</a>' +
-						'</ul>' 
-					)
-					.appendTo('#beerList');
-				});
-			}
-		});
+	var $db = $.couch.db('blager');
+	
+	$.ajaxSetup ({
+		cache : false
 	});
-	
-	
-	//CSV DATA LOAD
-	$('#csvButton').bind('click', function(){
-		$('#beerList').empty();
-		 $.ajax({
-	        type: "GET",
-	        url: "xhr/data.csv",
-	        dataType: "text",
-	        success: function(data) {
-	        	var allTextLines = data.split(/\r\n|\n/);
-	    		var csvText = allTextLines[0].split(',');
-	    		var csvData = [];
-				for (var i=1; i<allTextLines.length; i++) {
-					var data = allTextLines[i].split(',');
-					if (data.length == csvText.length) {
-						var beers = []; 
-						for (var j=0; j<csvText.length; j++) {
-							beers.push(data[j]); 
-						}
-						csvData.push(beers); 
-					}
-					
-				}
-				
-				for (var m=0; m<csvData.length; m++){
-					var beers = csvData[m];
-					$(
-						'<ul data-role="listview">' +	
-							'<li><b> Name of Beer:</b><a class="editable"> '+ beers[0] +'</a></li>' +
-							'<li><b> On Wishlist:</b><a class="editable"> '+ beers[1] +'</a></li>' +
-							'<li><b> Rating:</b><a class="editable"> '+ beers[2] +'</a></li>' +
-							'<li><b> Comments:</b><a class="editable"> '+ beers[3] +'</a></li>' +
-							'<a href="#" data-role="button" id="deleteOne">Remove</a>' +
-						'</ul>'	
-					)
-					.appendTo('#beerList');
-				}
-	        }		
-		});
-	});
-	
-	//JSON DATA LOAD
-	
-	$('#jsonButton').bind('click', function(){
-		$('#beerList').empty();
-		$.ajax({
-			url: 'xhr/data.json',
-			type: 'GET',
-			dataType: 'json',
-			success: function(beer){
-	        	for (var i=0, j=beer.beerJson.length; i<j; i++){
-					var jsBeer = beer.beerJson[i];
-					$(
-						'<ul data-role="listview">' +	
-							'<li><b> Name of Beer:</b><a class="editable"> '+ jsBeer.name +'</a></li>' +
-							'<li><b> On Wishlist:</b><a class="editable"> '+ jsBeer.wishlist +'</a></li>' +
-							'<li><b> Rating: </b><a class="editable">'+ jsBeer.rating +'</a></li>' +
-							'<li><b> Comments: </b><a class="editable">'+ jsBeer.comments +'</a></li>' +
-							'<a href="#" data-role="button" id="deleteOne">Remove</a>' +
-						'</ul>'	
-					)
-					.appendTo('#beerList');
-				}
-			}
-		});
-	});
-
 	//CouchDB Function
-	$('#couchButton').bind('click', function(){
+	$('#couchButton').on('click', function(){
+		$('div#couchList').empty();
 		$.ajax({
-			"url": "_view/blager",
-			"dataType": "json",
-			"success" : function(data){
+			url: "_view/blager",
+			cache: false,
+			dataType: "json",
+			beforeSend: function(){
+				$.mobile.changePage('#wishlist')
+			},
+			success : function(data){
 				$.each(data.rows, function(index, beer){
+					var id = "beer:" + beer.value.name;
+					console.log(id);
 					var name = beer.value.name;
 					var wishlist = beer.value.wishlist;
 					var rating = beer.value.rating;
 					var comments = beer.value.comments;
 					$(
-						'<ul data-role="listview">' +	
-							'<li><b> Name of Beer:</b><a class="editable"> '+ name +'</a></li>' +
-							'<li><b> On Wishlist:</b><a class="editable"> '+ wishlist +'</a></li>' +
-							'<li><b> Rating: </b><a class="editable">'+ rating +'</a></li>' +
-							'<li><b> Comments: </b><a class="editable">'+ comments +'</a></li>' +
-							'<a href="#" data-role="button" id="deleteOne">Remove</a>' +
-						'</ul>'	
+						'<div class="beerlist">' +	
+							'<ul data-role="listview">' +
+								'<li class="name"><b>Name: </b> '+ name +'</li>' +
+								'<li class="wishlist"><b> On Wishlist:</b> '+ wishlist +'</li>' +
+								'<li class="rating"> <b> Rating: </b>'+ rating +'</li>' +
+								'<li class="comments"><b> Comments: </b>'+ comments +'</li>' +
+								'<a href="#" class="edit" id ="'+id+'" >Edit</a>' +
+								'<a href="#" class="delete" id ="'+id+'"> Delete</a>' +
+							'</ul>' +
+						'</div>' 
 					)
-					.appendTo('#couchList');
+					.appendTo('div#couchList');
 				});
-				$('couchList').listview('refresh');
 			}
 		});
 	});
 	
 	//Delete Single Item Button
-	$('#deleteOne').live('click', function(){
-		$(this).closest('ul').remove();
+	$("div#couchList").click(function(event) {
+		var $tgt = $(event.target);
+		if ($tgt.is('a')) {
+			id = $tgt.attr("id");
+			console.log(id);
+		    if ($tgt.hasClass("edit")) {
+		      	html = '<span class="editconfirm">Are you sure you want to edit? <a href="#" class="doEdit" id="'+id+'">Yes</a> <a href="#" class="cancelEdit"> No</a></span>';
+		      	$tgt.parent().append(html);   
+		    }
+			if ($tgt.hasClass("doEdit")) {
+				$db.openDoc(id, {
+					success: function(doc){
+						
+						var name = doc.name;
+						var rating = doc.rating;
+						var wishlist = doc.wishlist;
+						var comments = doc.comments;
+						$db.removeDoc(doc);
+						$.mobile.changePage('#form');
+						$('#name').val(name);
+						$('#wishlist').val(wishlist);
+						$('#rating').val(rating);
+						$('#comments').val(comments);
+						
+					}
+				})
+			}
+			if ($tgt.hasClass("cancelEdit")) {
+				$tgt.parents("span.editconfirm").remove();
+			}
+		    if ($tgt.hasClass("delete")) {
+		    	html = '<span class="deleteconfirm">Are you sure you want to delete? <a href="#" class="dodelete" id="'+id+'">Yes</a> <a href="#" class="canceldelete"> No</a></span>';
+		      	$tgt.parent().append(html);
+		    }
+		    if ($tgt.hasClass("dodelete")) {
+				//console.log(id);
+		    	$db.openDoc(id, { 
+					success: function(doc) {
+		       			$db.removeDoc(doc, { 
+							success: function() {
+		        				$tgt.parents("div.beerlist").remove();     
+		       	}})
+		    }});      
+			}
+			if ($tgt.hasClass("canceldelete")) {
+				$tgt.parents("span.deleteconfirm").remove();
+			}
+		}
+	});
+
+	
+	
+	$('#deleteOne').on('click', function(){
+		var deleteThis = $("#beerID").text();
+		var ask = confirm("Are you sure you want to delete?");
+		if(ask){
+			$db.openDoc(deleteThis,{
+				success: function(doc){
+					$db.removeDoc(doc, {
+						success: function(){
+							alert('Deleted!');
+						},
+						error: function(){
+							alert('ERROR!');
+						}
+					});
+				}
+			});
+			alert("Entry was deleted");
+		} else {
+			alert("Entry was not deleted");
+		}
+	
 	});
 	
 	//Clear Button
@@ -152,44 +126,31 @@ $(document).ready(function(){
 		$('#couchList').remove();
 	});
 	
-	//In Line Edit Function
-	$('.editable').inlineEdit({
-		save: function(e, data) {
-			return confirm('Are you sure you want to change to ' + data.value + '?');
-		}
-	});
+	
 	
 	var form = $('#form');	
 	//FORM VALIDATION/SUBMIT		
-	//$('#form').submit(function(){
-		form.validate({
-			rules: {
-				name: 'required',
-			},//end rules
-			messages: {
-				name: "Please enter the name of the beer",
-			},//end messages
-			errorPlacement: function(error, element) {
-				error.insertAfter(element.siblings("label"));
-			}//end error placement
-		}); //end validate
 
-		//var item			= {};
-		//	item.name 		= ["Name of Beer:", $('#name').value];
-		//	item.wishlist   = ["Wish List Item:", $('#wishlist').value];
-		//	item.location 	= ["Brewery Location:", $('#location').value];
-		//	item.comments 	= ["Comments:", $('#comments').value];
-		//saves data into local storage
-		//localStorage.setItem(id, JSON.stringify(item));
-		//alert("Saved a Beer!");
-
-	//});
 	
-	//Delete Function
-	var deleteButton = function(){
-		var value = localStorage.getItem(this.key);
-		var item = JSON.parse(value);
-	}
+	$('#submit').on('click', function(x){
+		x.preventDefault();
+		var info = {};
+		info._id = "beer:"+ $("#name").val();
+		info.name = $("#name").val();
+		info.wishlist = $('#wishlist').val();
+		info.rating = $('#rating').val();
+		info.comments = $('#comments').val();
+		info.type = "beer"
+		$db.saveDoc(info, {
+			success : function() {
+				$.mobile.changePage('#home');
+				alert("Saved a beer!");
+			},
+			error: function(){
+				alert("ERROR!")
+			}
+		});
+	});
 });//end ready
 
 
