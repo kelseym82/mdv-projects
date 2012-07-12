@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
-		<!-- <script src="js/modernizr.custom.min.js"></script>  Not needed right now -->
+		<script src="js/modernizr.custom.min.js"></script>
 
 	</head>
 	
@@ -34,8 +34,9 @@
 			<button onclick="window.location.href='https://kelseym.cloudant.com/blager/_design/beerlager/index.html'">Beer Lager w/CouchDB</button>
 					
 		<h3>iOS/Android Native Feature Demos</h3>
-			<button onclick="window.location.href='UC.html'">Geolocation</button>
+			<button id="geoBtn">Geolocation</button>
 			<button onclick="window.location.href='UC.html'">Notifications</button>
+		<h3>i0S Native Feature Demos</h3>	
 			<button onclick="window.location.href='UC.html'">Accelerometer</button>
 			<button onclick="window.location.href='UC.html'">Media</button>
 			<button onclick="window.location.href='UC.html'">Camera</button>
@@ -45,6 +46,17 @@
 			<button onclick="window.location.href='discussions/week1.html'">Week One: Discussion Question</button>
 			<button onclick="window.location.href='UC.html'">Week Two: Discussion Question</button>
 			<button onclick="window.location.href='UC.html'">Week Three: Discussion Question</button>
+	
+	<!--jquery and jqm-->
+	<!--order of js is important below-->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<!--<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>-->
+
+	<!--plugins-->
+	
+	<!--custom js-->	
+	<script type="text/javascript" src="js/main.js"></script>
+
 	</body>
 
 </html>
