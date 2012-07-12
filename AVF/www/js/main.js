@@ -49,9 +49,15 @@ $(document).ready(function(){
 		jQuery("#notBtn").click(initiate_notification);
 	});	
 	
+		
 	function initiate_notification(){
+		alert("Alert Successful - Browser");
 		navigator.notification.beep(1);
-		navigator.notification.alert("Notification Successful");
+		navigator.notification.alert(
+		"Notification Successful", 	//Message
+		"Notification Test" , 					//Title
+		"Close"						//Name of the Button
+	);
 	}
 	
 });	
