@@ -31,6 +31,27 @@ $(document).ready(function(){
 	}
 	
 	function handle_geolocation_query(position){
-		alert('Lat: ' + position.coords.latitude + ' Lon: ' + position.coords.longitude);
+		//Test geolocation w/out Map
+		//alert('Lat: ' + position.coords.latitude + ' Lon: ' + position.coords.longitude);
+      	var image_url = "http://maps.google.com/maps/api/staticmap?sensor=false&center=" + position.coords.latitude + "," +  
+                    position.coords.longitude + "&zoom=14&size=300x400&markers=color:blue|label:S|" +  
+                    position.coords.latitude + ',' + position.coords.longitude;
+      		
+		jQuery("#map").remove();
+		jQuery(document.body).append(
+			jQuery(document.createElement("img")).attr("src", image_url).attr('id', 'map')
+		);
 	}
+	
+//NOTIFICATION
+
+	jQuery(window).ready(function(){
+		jQuery("#notBtn").click(initiate_notification);
+	});	
+	
+	function initiate_notification(){
+		navigator.notification.beep(1);
+		navigator.notification.alert("Notification Successful");
+	}
+	
 });	
