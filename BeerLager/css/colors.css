@@ -1,0 +1,14 @@
+
+
+#form label.error {
+	font-size: 0.8em;
+	color: #F00;
+	font-weight: bold;
+	display: block;
+	
+}
+
+#form input.error, #form select.error {
+	background: #FFA9B8;
+	border: 1 px solid red;
+}

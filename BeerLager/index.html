@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<!-- Beer Lager Application -->
+<!-- Author: Michael J. Kelsey -->
+<!-- For: Full Sail University -->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Beer Lager</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+	<link rel="stylesheet" href="css/colors.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.swatch.i.css"/>
+		
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+<body>
+	
+
+	<div data-role="page" id="home" data-theme="i">
+	
+		<div data-role="header" id="hdrHome" data-posistion="fixed" data-theme="i" data-nobackbtn="true">
+			<h1>Beer Lager</h1>
+		</div>
+		
+		
+		<div data-role="content">
+			<p style="padding-left:35px;"><a href="#addbeer">Add a beer</a></p>
+		</div>
+		
+		<div data-role="controlgroup" data-theme="i">
+			<a href="#addbeer" data-role="button" data-icon="arrow-r" data-iconpos="right">Add a Beer</a>
+			<a href="#viewlist" data-role="button" data-icon="arrow-r" data-iconpos="right">View List of Rated Beers</a>
+			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">View Wish List</a>
+			<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">Beer University</a>
+		</div>
+	</div>
+	
+	<div data-role="page" id="addbeer" data-theme="i">
+		<!-- ======= Main Form Page Starts Here ========= -->
+		<div data-role="header" id="hdrMain" name="hdrMain" data-theme="i" data-nobackbtn="true">
+			<h1><img src="images/logo.png"/></h1>
+		</div>
+		
+		<div data-role="content"  id="contentMain" name="contentMain">
+			<form action="" method="post" id="form" >
+				
+				<div id="nameDiv">
+					<label id="nameLabel" for="name">Name of Beer*:</label>
+					<input type="text" name="name" id="name" data-mini="true" class="required"/>
+				</div>
+				<div id="wishlistDiv">
+					<label id="wishlistLabel" for="wishlist">Add Beer to wish list:</label>
+					<select name="wishlist" id="wishlist" data-role="slider" data-mini="true">
+						<option value="No">No</option>
+						<option value="Yes">Yes</option>
+					</select>
+				</div>
+				</br>
+				<div id="locationDiv">
+					<label id="locationLabel" for="location">Brewery Location:</label>
+					<input type="text" name="location" id="location" data-mini="true"/>
+				</div>
+				<div data-role="fieldcontain">
+				<label id="starLabel" for="star">Rate Beer:</label>
+				<div id="star"></div>
+				</div>
+				
+				<div id="commentsDiv">
+					<label id="commentsLabel" for="comments">Comments:</label>
+					<textarea name="comments" id="comments"></textarea>
+				</div>
+				<div data-role="fieldcontain" id="buttonDiv">
+					<big><input type="submit" value="Submit" id="submit" data-theme="b"/></big>
+ 					<small><input type="reset" value="Reset Form" id="reset" data-theme="a"/></small>
+				</div>
+		    </form>
+		</div>
+		<div data-role="footer" id="ftrMain" name="ftrMain"></div>
+		<!-- ======= Main Form Page Ends Here ========= -->
+		
+	</div><!-- The Add a Beer Page Ends Here -->
+	
+	<div data-role="page" id="viewlist" data-add-back-btn="true" data-theme="i">
+	
+		<div data-role="header" data-posistion="fixed" data-theme="i" >
+			<h1><img src="images/logo.png"/></h1>
+		</div>
+		<div data-role="navbar" data-iconpos="left">
+			<ul>
+				<li class="ui-block-c">
+					<a href="#" data-role="button" id="jsonButton">Load JSON</a>
+				</li>
+				<li class="ui-block-c">
+					<a href="#" data-role="button" id="xmlButton">Load XML</a>
+				</li>
+				<li class="ui-block-c">
+					<a href="#" data-role="button" id="csvButton">Load CSV</a>
+				</li>
+			</ul>
+			<h5>Click on text to edit, Enter to Save, ESC to Cancel</h5>
+		</div>
+		<div data-role="content" id="beerList">
+			<ul data-role="listview" ></ul>
+		</div>
+		<div data-role="footer" id="ftrMain" name="ftrMain" data-position="fixed">
+			<li class="ui-block-c">
+				<a href="#" data-role="button" id="dataClear">Clear all Data</a>
+			</li>
+		</div>
+	</div>		
+	
+	<div data-role="page" id="uc" data-add-back-btn="true" data-theme="i">
+	
+		<div data-role="header" data-posistion="fixed" data-theme="i" >
+			<h1><img src="images/logo.png"/></h1>
+		</div>
+	
+		<div data-role="content">
+		
+			<p style="center"><img src="images/Underconstruction.png" /></p>
+		
+		</div>
+		<div data-role="footer" id="ftrMain" name="ftrMain">
+		
+		</div>
+	</div>
+	<!-- JavaScript -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.raty.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.inlineedit.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
