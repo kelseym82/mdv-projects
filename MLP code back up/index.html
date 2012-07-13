@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- Michael J. Kelsey -->
+<!-- Full Sail University -->
+<!-- AVF - Mobile Launch Page -->
+
+<html lang="en">
+	<head>
+		<title>AVF Mobile Launch Page</title>
+		<meta type="charset" content = "utf-8" />
+
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		
+		<!-- style sheets underhere-->
+		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script type="text/javascript" src="js/modernizr.custom.min.js"></script>
+		<script type="text/javascript" src="js/cordova-1.9.0.js"></script>
+
+	</head>
+	
+	<body>
+		<h1>AVF Mobile Launch Page</h1>
+		<h3>Developer Info</h3>
+			<p>Michael J. Kelsey</p>
+			<p>FSO AVF 1207</p>
+		
+		<h3>CRUD Applications</h3>
+			<button onclick="window.location.href='https://kelseym.cloudant.com/blager/_design/beerlager/index.html'">Beer Lager w/CouchDB</button>
+					
+		<h3>iOS/Android Native Feature Demos</h3>
+			<button id="geoBtn">Geolocation</button>
+			<button id="notBtn">Notifications</button>
+		<h3>iOS  or Andriod Native Feature Demos</h3>	
+			<button onclick="window.location.href='UC.html'">Accelerometer</button>
+			<button onclick="window.location.href='UC.html'">Media</button>
+			<button onclick="window.location.href='UC.html'">Camera</button>
+			<button onclick="window.location.href='UC.html'">Storage</button>
+		
+		<h3>Research</h3>
+			<button onclick="window.location.href='discussions/week1.html'">Week One: Discussion Question</button>
+			<button onclick="window.location.href='UC.html'">Week Two: Discussion Question</button>
+			<button onclick="window.location.href='UC.html'">Week Three: Discussion Question</button>
+	
+	<!--jquery and jqm-->
+	<!--order of js is important below-->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<!--<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>-->
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+	
+	<!--plugins-->
+	
+	<!--custom js-->	
+	<script type="text/javascript" src="js/main.js"></script>
+
+	</body>
+
+</html>
