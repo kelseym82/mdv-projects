@@ -116,7 +116,7 @@ $(document).ready(function(){
 	}
 	
 	function onSuccess(heading){
-		alert('Heading: ' + heading);
+		alert('Heading: ' + heading.magneticHeading);
 	}
 	
 	function onError(){
