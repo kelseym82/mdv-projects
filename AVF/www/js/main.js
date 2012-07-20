@@ -2,13 +2,6 @@
 
 $(document).ready(function(){
 
-	document.addEventListener("deviceready", onDeviceReady, false);
-
-	function onDeviceReady(){
-		pictureSource=navigator.camera.PictureSourceType;
-		destinationType=navigator.camera.DestinationType;
-	}
-
 
 
 
@@ -93,43 +86,42 @@ $(document).ready(function(){
 		jQuery("#camBtn1").click(capturePhoto);
 	});
 
-	jQuery(window).ready(function(){
-		jQuery("#camBtn2").click(capturePhotoEdit);
-	});
-
-	jQuery(window).ready(function(){
-		jQuery("#camBtn3").click(getPhoto);
-	});
-
-	
-	function onPhotoDataSuccess(imageData){
-		var smallImage = document.getElementById('smallImage');
-		smallImage.style.display = "block";
-		smallImage.src = "data:image/jpg;base64," + imageData;
-	}
-	
-	function onPhotoURISuccess(imageURI){
-		var largeImage = document.getElementById('largeImage');
-		largeImage.style.display = "block";
-		largeImage.src = imageURI;
-	}
-	
 	function capturePhoto(){
-		navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50});
+        navigator.camera.getPicture(onSuccess, onFail, { quality: 50, allowEdit: true, destinationType: Camera.DestinationType.DATA_URL }); 
+		
+		function onSuccess(imageData) {
+		    var image = document.getElementById('myImage');
+            image.style.display = "block";
+            image.style.visibility = "visible";
+            image.src = "data:image/jpeg;base64," + imageData
+        }
+		
+		function onFail(message) {
+		    alert('Failed because: ' + message);
+		}
+
 	}
 
-	function capturePhotoEdit(){
-		navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true});
-	}
+//COMPASS
 
-	function getPhoto(source){
-		navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, destinationType: destinationType.FILE_URI, sourceType: source });
-	}
+	jQuery(window).ready(function(){
+		jQuery("#compBtn").click(init_compass)
+	});
+	
 
-	function onFail(message) {
-		alert('Failed because: ' + message);
+	
+	function init_compass(){
+        //alert('hey you clicked something')
+		navigator.compass.getCurrentHeading(onSuccess, onError);
 	}
-
+	
+	function onSuccess(heading){
+		alert('Heading: ' + heading);
+	}
+	
+	function onError(){
+		alert('ERROR!');
+	}
 
 
 

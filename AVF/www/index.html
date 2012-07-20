@@ -43,7 +43,7 @@
 						<a href="https://kelseym.cloudant.com/blager/_design/beerlager/index.html" data-role="button" data-icon="arrow-r" 
 							data-iconpos="right">CRUD App</a>
 						<a href="#both" data-role="button" data-icon="arrow-r" data-iconpos="right">iOS/Android Native Feature Demos</a>
-						<a href="#uc" data-role="button" data-icon="arrow-r" data-iconpos="right">iOS or Android Native Feature Demos</a>
+						<a href="#or" data-role="button" data-icon="arrow-r" data-iconpos="right">iOS or Android Native Feature Demos</a>
 						<a href="#research" data-role="button" data-icon="arrow-r" data-iconpos="right">Research</a>
 					</div>
 				</section>
@@ -57,10 +57,20 @@
 				<section>
 					<a href="#geo" data-role="button" data-iconpos="right">Geolocation</a>
 					<a href="#not" data-role="button" data-iconpos="right">Notification</a>
+					<a href="#cam" data-role="button" data-iconpos="right">Camera</a>
 				</section>
 			</div>
 		</div>
 
+		<div data-role="page" id="or" data-add-back-btn="true">
+			<div data-role="header" data-position="fixed" id="header" ><h1>iOS/Android Demos</h1></div>
+			<div data-role="content">
+				<section>
+					<a href="#comp" data-role="button" data-iconpos="right">Compass - iOS</a>
+				</section>
+			</div>
+		</div>
+		
 		<div data-role="page" id="geo" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" id="header" ><h1>Geolocation</h1></div>
 			<div data-role="content">
@@ -105,6 +115,28 @@
 				</section>
 			</div>
 		</div>
+
+		<div data-role="page" id="cam" data-add-back-btn="true">
+			<div data-role="header" data-position="fixed" id="header" ><h1>Research</h1></div>
+			<div data-role="content">
+				<section>
+						<a href="" id="camBtn1" data-role="button">Capture Photo</a>
+						<img style="display:none; width:288px;height:288px;" id="myImage" src="" />
+				</section>
+			</div>
+		</div>
+
+		<div data-role="page" id="comp" data-add-back-btn="true">
+			<div data-role="header" data-position="fixed" id="header" ><h1>Research</h1></div>
+			<div data-role="content">
+				<section>
+						<div id="heading">Waiting for heading...</div>
+						<a href="" id="compBtn" data-role="button">Start Watching</a>
+						<a href="" id="stopCompBtn" data-role="button">Stop Watching</a>
+				</section>
+			</div>
+		</div>
+
 
 		<div data-role="page" id="one" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" id="header" ><h1>Week One</h1></div>
