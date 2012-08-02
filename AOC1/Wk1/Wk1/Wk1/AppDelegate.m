@@ -22,6 +22,81 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    //Code starts here
+    
+    //REMINDERS
+    //boolean logic operators
+    /*
+     == equals
+     != not equal
+     < less than
+     <= less than or equal to
+     > greater than
+     >= greater than or equal to
+     */
+    
+    
+    //Variables
+    bool isZombieApocalypse = YES;
+    bool zombiesPresent = YES;
+    float daysWithoutFood = 2.3f;
+    int ammoCount = 9;
+    int zombieCount = arc4random() % 12;//<<random zombie count MAX 12 zombies
+    
+    
+    
+    //Checks to see if it is the Zombie Apocalypse
+    if (isZombieApocalypse == YES) {
+        NSLog(@"OMG it's the Zombie Apocalypse!!!");
+    }
+    else {
+        NSLog(@"Such a beautiful Zombie-free day.");
+    }
+    
+    
+    //Finds how many zombies are around you, and compares that number to ammount of ammo you have.
+    if (isZombieApocalypse && zombiesPresent) {
+        if (zombieCount > ammoCount) {
+            NSLog(@"I am getting the heck out of here!");
+        }
+        else if (zombieCount <= ammoCount){
+            NSLog(@"Time to kill me some zombies");
+            //Nested Loop
+            for (int i = zombieCount; i >= 0; i--) {
+                if (i > 1) {
+                    NSLog(@"Bang! Only %i zombies left", i);
+                }
+                else if (i == 1)
+                    NSLog(@"Bang! Only %i zombie left", i);
+                else {
+                    NSLog(@"Bang! Last one. Good, I survive another day.");
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     return YES;
 }
 
