@@ -84,9 +84,9 @@
     
     //Nested Loop
     NSLog(@"I should take this time to reload my magazines");
-    for (int i = 0; i <= 4; i++) {
+    for (int i = 1; i <= 4; i++) {
         NSLog(@"Magazine #%d", i);
-        for (int j = 0; j <= 9; j++)
+        for (int j = 1; j <= 9; j++)
             NSLog(@"Rounds added to magazine: %d", j);
     }
     
