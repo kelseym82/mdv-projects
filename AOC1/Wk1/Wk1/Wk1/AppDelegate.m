@@ -40,11 +40,16 @@
     //Variables
     bool isZombieApocalypse = YES;
     bool zombiesPresent = YES;
-    float daysWithoutFood = 2.3f;
+    //Created a float
+    float exactDaysWithoutFood = 2.3f;
+    //Cast the float to an int
+    int approxDayWithoutFood = (int)exactDaysWithoutFood;
     int ammoCount = 9;
-    int zombieCount = arc4random() % 12;//<<random zombie count MAX 12 zombies
+    float zombieCount = arc4random() % 12;//<<random zombie count MAX 12 zombies
     
-    
+    //Using both the float and the casted to int float in an NSLog
+    NSLog(@"I am so hungry is been exactly %.1f days since I had a bite to eat", exactDaysWithoutFood);
+    NSLog(@"It has been around %d days since I had some food", approxDayWithoutFood);
     
     //Checks to see if it is the Zombie Apocalypse
     if (isZombieApocalypse == YES) {
@@ -56,19 +61,20 @@
     
     
     //Finds how many zombies are around you, and compares that number to ammount of ammo you have.
+    //AND, OR comparison
     if (isZombieApocalypse && zombiesPresent) {
         if (zombieCount > ammoCount) {
             NSLog(@"I am getting the heck out of here!");
         }
         else if (zombieCount <= ammoCount){
             NSLog(@"Time to kill me some zombies");
-            //Nested Loop
+            //Loop
             for (int i = zombieCount; i >= 0; i--) {
                 if (i > 1) {
-                    NSLog(@"Bang! Only %i zombies left", i);
+                    NSLog(@"Bang! Only %d zombies left", i);
                 }
                 else if (i == 1)
-                    NSLog(@"Bang! Only %i zombie left", i);
+                    NSLog(@"Bang! Only %d zombie left", i);
                 else {
                     NSLog(@"Bang! Last one. Good, I survive another day.");
                 }
@@ -76,7 +82,28 @@
         }
     }
     
+    //Nested Loop
+    NSLog(@"I should take this time to reload my magazines");
+    for (int i = 0; i <= 4; i++) {
+        NSLog(@"Magazine #%d", i);
+        for (int j = 0; j <= 9; j++)
+            NSLog(@"Rounds added to magazine: %d", j);
+    }
     
+    //While Loop
+    NSLog(@"The years past by.");
+    int years = 0;
+    int maxYears = 5;
+    
+    while (years < 100){
+        years++;
+        NSLog(@"It has been %d years since the zombies came", years);
+        if (years == maxYears){
+            NSLog(@"It has been too long to remember");
+            break;
+        }
+    }
+        
     
     
     
