@@ -16,7 +16,22 @@
 
 - (void)viewDidLoad
 {
+    //Background Color
     self.view.backgroundColor = [UIColor blackColor];
+    
+    //Title
+    bookTitle = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 40)];
+    
+    if (bookTitle != nil)
+    {
+        bookTitle.textAlignment = UITextAlignmentCenter;
+        bookTitle.textColor = [UIColor blueColor];
+        bookTitle.backgroundColor = [UIColor redColor];
+        bookTitle.text = @"Ender's Game";
+    }
+    [self.view addSubview: bookTitle];
+    
+    
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -28,13 +43,13 @@
     // Release any retained subviews of the main view.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    
+}
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 @end

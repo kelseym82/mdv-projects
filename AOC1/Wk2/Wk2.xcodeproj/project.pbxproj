@@ -14,23 +14,8 @@
 		B2C78BE215D33C6C00EA4146 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C78BE115D33C6C00EA4146 /* main.m */; };
 		B2C78BE615D33C6C00EA4146 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C78BE515D33C6C00EA4146 /* AppDelegate.m */; };
 		B2C78BEF15D33C6C00EA4146 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C78BEE15D33C6C00EA4146 /* ViewController.m */; };
-		B2C78BF715D33C6D00EA4146 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C78BF615D33C6D00EA4146 /* SenTestingKit.framework */; };
-		B2C78BF815D33C6D00EA4146 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C78BD515D33C6C00EA4146 /* UIKit.framework */; };
-		B2C78BF915D33C6D00EA4146 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C78BD715D33C6C00EA4146 /* Foundation.framework */; };
-		B2C78C0115D33C6D00EA4146 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2C78BFF15D33C6D00EA4146 /* InfoPlist.strings */; };
-		B2C78C0415D33C6D00EA4146 /* Wk2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C78C0315D33C6D00EA4146 /* Wk2Tests.m */; };
 		B2C78C0E15D33CA900EA4146 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C78C0D15D33CA900EA4146 /* ViewController.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B2C78BFA15D33C6D00EA4146 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B2C78BC815D33C6C00EA4146 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B2C78BD015D33C6C00EA4146;
-			remoteInfo = Wk2;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B2C78BD115D33C6C00EA4146 /* Wk2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wk2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +30,6 @@
 		B2C78BE515D33C6C00EA4146 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B2C78BED15D33C6C00EA4146 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B2C78BEE15D33C6C00EA4146 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B2C78BF515D33C6D00EA4146 /* Wk2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wk2Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C78BF615D33C6D00EA4146 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B2C78BFE15D33C6D00EA4146 /* Wk2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Wk2Tests-Info.plist"; sourceTree = "<group>"; };
 		B2C78C0015D33C6D00EA4146 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -62,16 +46,6 @@
 				B2C78BD615D33C6C00EA4146 /* UIKit.framework in Frameworks */,
 				B2C78BD815D33C6C00EA4146 /* Foundation.framework in Frameworks */,
 				B2C78BDA15D33C6C00EA4146 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B2C78BF115D33C6D00EA4146 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B2C78BF715D33C6D00EA4146 /* SenTestingKit.framework in Frameworks */,
-				B2C78BF815D33C6D00EA4146 /* UIKit.framework in Frameworks */,
-				B2C78BF915D33C6D00EA4146 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				B2C78BD115D33C6C00EA4146 /* Wk2.app */,
-				B2C78BF515D33C6D00EA4146 /* Wk2Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,25 +144,6 @@
 			productReference = B2C78BD115D33C6C00EA4146 /* Wk2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B2C78BF415D33C6D00EA4146 /* Wk2Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B2C78C0A15D33C6D00EA4146 /* Build configuration list for PBXNativeTarget "Wk2Tests" */;
-			buildPhases = (
-				B2C78BF015D33C6D00EA4146 /* Sources */,
-				B2C78BF115D33C6D00EA4146 /* Frameworks */,
-				B2C78BF215D33C6D00EA4146 /* Resources */,
-				B2C78BF315D33C6D00EA4146 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B2C78BFB15D33C6D00EA4146 /* PBXTargetDependency */,
-			);
-			name = Wk2Tests;
-			productName = Wk2Tests;
-			productReference = B2C78BF515D33C6D00EA4146 /* Wk2Tests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,7 +166,6 @@
 			projectRoot = "";
 			targets = (
 				B2C78BD015D33C6C00EA4146 /* Wk2 */,
-				B2C78BF415D33C6D00EA4146 /* Wk2Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -227,31 +180,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B2C78BF215D33C6D00EA4146 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B2C78C0115D33C6D00EA4146 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B2C78BF315D33C6D00EA4146 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2C78BCD15D33C6C00EA4146 /* Sources */ = {
@@ -264,23 +193,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B2C78BF015D33C6D00EA4146 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B2C78C0415D33C6D00EA4146 /* Wk2Tests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B2C78BFB15D33C6D00EA4146 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B2C78BD015D33C6C00EA4146 /* Wk2 */;
-			targetProxy = B2C78BFA15D33C6D00EA4146 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B2C78BDE15D33C6C00EA4146 /* InfoPlist.strings */ = {
@@ -358,6 +271,7 @@
 				GCC_PREFIX_HEADER = "Wk2/Wk2-Prefix.pch";
 				INFOPLIST_FILE = "Wk2/Wk2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -369,41 +283,8 @@
 				GCC_PREFIX_HEADER = "Wk2/Wk2-Prefix.pch";
 				INFOPLIST_FILE = "Wk2/Wk2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		B2C78C0B15D33C6D00EA4146 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Wk2.app/Wk2";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Wk2/Wk2-Prefix.pch";
-				INFOPLIST_FILE = "Wk2Tests/Wk2Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		B2C78C0C15D33C6D00EA4146 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Wk2.app/Wk2";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Wk2/Wk2-Prefix.pch";
-				INFOPLIST_FILE = "Wk2Tests/Wk2Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -424,14 +305,6 @@
 			buildConfigurations = (
 				B2C78C0815D33C6D00EA4146 /* Debug */,
 				B2C78C0915D33C6D00EA4146 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		B2C78C0A15D33C6D00EA4146 /* Build configuration list for PBXNativeTarget "Wk2Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B2C78C0B15D33C6D00EA4146 /* Debug */,
-				B2C78C0C15D33C6D00EA4146 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

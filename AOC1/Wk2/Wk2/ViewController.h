@@ -9,5 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    UILabel *bookTitle,
+            *authorLabel,
+            *authorName,
+            *publishedLabel,
+            *publishedDate,
+            *summaryLabel,
+            *summaryText,
+            *itemListLabel,
+            *itemListText;
+    NSMutableArray *mutableArray;
+}
 
 @end
