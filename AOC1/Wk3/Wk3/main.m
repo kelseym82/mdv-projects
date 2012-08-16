@@ -1,8 +1,8 @@
 //
 //  main.m
-//  OMG
+//  Wk3
 //
-//  Created by Michael Kelsey on 8/8/12.
+//  Created by Michael Kelsey on 8/15/12.
 //  Copyright (c) 2012 Michael Kelsey. All rights reserved.
 //
 

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B2C78C1915D3508800EA4146"
-               BuildableName = "OMG.app"
-               BlueprintName = "OMG"
-               ReferencedContainer = "container:OMG.xcodeproj">
+               BlueprintIdentifier = "B2CD62F415DC7AC000D7B880"
+               BuildableName = "Wk3.app"
+               BlueprintName = "Wk3"
+               ReferencedContainer = "container:Wk3.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B2C78C3D15D3508900EA4146"
-               BuildableName = "OMGTests.octest"
-               BlueprintName = "OMGTests"
-               ReferencedContainer = "container:OMG.xcodeproj">
+               BlueprintIdentifier = "B2CD631815DC7AC000D7B880"
+               BuildableName = "Wk3Tests.octest"
+               BlueprintName = "Wk3Tests"
+               ReferencedContainer = "container:Wk3.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B2C78C1915D3508800EA4146"
-            BuildableName = "OMG.app"
-            BlueprintName = "OMG"
-            ReferencedContainer = "container:OMG.xcodeproj">
+            BlueprintIdentifier = "B2CD62F415DC7AC000D7B880"
+            BuildableName = "Wk3.app"
+            BlueprintName = "Wk3"
+            ReferencedContainer = "container:Wk3.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B2C78C1915D3508800EA4146"
-            BuildableName = "OMG.app"
-            BlueprintName = "OMG"
-            ReferencedContainer = "container:OMG.xcodeproj">
+            BlueprintIdentifier = "B2CD62F415DC7AC000D7B880"
+            BuildableName = "Wk3.app"
+            BlueprintName = "Wk3"
+            ReferencedContainer = "container:Wk3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B2C78C1915D3508800EA4146"
-            BuildableName = "OMG.app"
-            BlueprintName = "OMG"
-            ReferencedContainer = "container:OMG.xcodeproj">
+            BlueprintIdentifier = "B2CD62F415DC7AC000D7B880"
+            BuildableName = "Wk3.app"
+            BlueprintName = "Wk3"
+            ReferencedContainer = "container:Wk3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

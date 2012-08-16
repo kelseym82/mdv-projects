@@ -1,14 +1,14 @@
 //
-//  OMGTests.m
-//  OMGTests
+//  Wk3Tests.m
+//  Wk3Tests
 //
-//  Created by Michael Kelsey on 8/8/12.
+//  Created by Michael Kelsey on 8/15/12.
 //  Copyright (c) 2012 Michael Kelsey. All rights reserved.
 //
 
-#import "OMGTests.h"
+#import "Wk3Tests.h"
 
-@implementation OMGTests
+@implementation Wk3Tests
 
 - (void)setUp
 {
@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in OMGTests");
+    STFail(@"Unit tests are not implemented yet in Wk3Tests");
 }
 
 @end

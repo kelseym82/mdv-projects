@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>OMG.xcscheme</key>
+		<key>Wk3.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>B2C78C1915D3508800EA4146</key>
+		<key>B2CD62F415DC7AC000D7B880</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2C78C3D15D3508900EA4146</key>
+		<key>B2CD631815DC7AC000D7B880</key>
 		<dict>
 			<key>primary</key>
 			<true/>
