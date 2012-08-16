@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+-(int)add:(int)firstNumber with:(int)secondNumber;
+-(BOOL)compare:(int)firstNumber with:(int)secondNumber;
+
+
 @end
