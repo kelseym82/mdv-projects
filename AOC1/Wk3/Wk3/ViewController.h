@@ -12,6 +12,10 @@
 
 -(int)add:(int)firstNumber with:(int)secondNumber;
 -(BOOL)compare:(int)firstNumber with:(int)secondNumber;
+-(NSString *)append:(NSString *)firstString with:(NSString *)secondString;
+-(void)displayAlertWithString:(NSString *)string;
+-(int)add;
+
 
 
 @end

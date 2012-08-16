@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad
 {
+
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -39,7 +41,23 @@
     {
         return NO;
     }
-    
+}
+
+//APPEND FUCNTION
+//Create a function called Append. This function will take two NSStrings and return a new NSString containing the appended strings using an NSMutableString and the Append method.
+-(NSString *)append:(NSString *)firstString with:(NSString *)secondString
+{
+    NSMutableString *outputString = [NSMutableString stringWithString:firstString];
+    NSString *string = [outputString stringByAppendingString:secondString];
+    return string;
+}
+
+//DISPLAY ALERT FUNCTION
+//Create a function called DisplayAlertWithString. This function will take as a parameter an NSString.
+-(void)displayAlertWithString:(NSString *)string
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hey! Listen!" message:string delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)viewDidUnload
