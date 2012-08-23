@@ -19,7 +19,7 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     
     //Create a UILabel near the top of your screen with teh text "Username:" in it.
-    usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 20.0f, 100.0f, 20.0f)];
+    usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 20.0f, 100.0f, 35.0f)];
     if (usernameLabel != nil)
     {
         usernameLabel.text = @"Username:";
@@ -28,9 +28,26 @@
         usernameLabel.backgroundColor = [UIColor lightGrayColor];
     }
     [self.view addSubview:usernameLabel];
+    
     //Create a UITextField to the right of the username label
+    usernameTextField = [[UITextField alloc] initWithFrame:CGRectMake(105.0f, 20.0f, 200.0f, 30.0f)];
+    if (usernameTextField != nil)
+    {
+        usernameTextField.borderStyle = UITextBorderStyleRoundedRect;
+
+    }
+    [self.view addSubview:usernameTextField];
     
     //Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
+    loginBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if (loginBtn != nil)
+    {
+        [loginBtn setTitle:@"Login" forState:UIControlStateNormal];
+        //[loginBtn setTintColor:[UIColor darkGrayColor]];<<<This does not work, in order to change the color you must make a custome button.  
+        loginBtn.frame = CGRectMake(5.0f, 60.0f, 300.0f, 50.0f);
+        
+    }
+    [self.view addSubview:loginBtn];
     //Create another UILabel beneath with the default text "Please Enter Username".
     //Add a target to the UIButton to call a function called onClick when the user presses the Login button.
     //If the user has not entered any text into the UITextField, display in the UILabel, "Username cannot be empty". Otherwise, display "User: username has been logged in".
