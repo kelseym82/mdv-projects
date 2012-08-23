@@ -19,7 +19,17 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     
     //Create a UILabel near the top of your screen with teh text "Username:" in it.
+    usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 20.0f, 100.0f, 20.0f)];
+    if (usernameLabel != nil)
+    {
+        usernameLabel.text = @"Username:";
+        usernameLabel.textAlignment = UITextAlignmentLeft;
+        usernameLabel.textColor = [UIColor blackColor];
+        usernameLabel.backgroundColor = [UIColor lightGrayColor];
+    }
+    [self.view addSubview:usernameLabel];
     //Create a UITextField to the right of the username label
+    
     //Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
     //Create another UILabel beneath with the default text "Please Enter Username".
     //Add a target to the UIButton to call a function called onClick when the user presses the Login button.
