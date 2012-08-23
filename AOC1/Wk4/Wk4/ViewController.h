@@ -13,6 +13,10 @@
     UILabel *usernameLabel;
     UITextField *usernameTextField;
     UIButton *loginBtn;
+    UILabel *textLabel;
+    UIButton *dateBtn;
+    UIButton *infoBtn;
+    UILabel *infoLabel;
 }
 
 @end
