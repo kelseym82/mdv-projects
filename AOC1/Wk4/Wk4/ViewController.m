@@ -87,13 +87,24 @@
     if (infoBtn !=nil)
     {
         infoBtn.tag = INFO_BTN;
-        infoBtn.frame = CGRectMake(5.0, 400.0f, 25.0f, 25.0f);
+        infoBtn.frame = CGRectMake(5.0f, 365.0f, 25.0f, 25.0f);
         [infoBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         
     }
     [self.view addSubview:infoBtn];
     
     //Create a UILabel beneath it that contains no initial text.
+    infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 400.0f, 310.0f, 65.0f)];
+    if (infoLabel !=nil)
+    {
+        infoLabel.text = @"";
+        infoLabel.textAlignment = UITextAlignmentCenter;
+        infoLabel.textColor = [UIColor blueColor];
+        infoLabel.backgroundColor = [UIColor lightGrayColor];
+    }
+        
+    [self.view addSubview:infoLabel];
+
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
