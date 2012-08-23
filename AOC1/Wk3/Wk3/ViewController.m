@@ -33,8 +33,8 @@
     [self displayAlertWithString:finalString];
     
     //Call the Compare function with two integer values. If Compare returns YES, display an UIAlertView both with the input values and the result using the DisplayAlertWithString function
-    int firstInt = 21;
-    int secondInt = 21;
+    int firstInt = 20;
+    int secondInt = 22;
     BOOL compareInt = [self compare:firstInt with:secondInt];
     NSString *compareAlert = [NSString stringWithFormat:@"The two numbers are %d and %d; Are they equal? %@", firstInt, secondInt, compareInt?@"YES":@"NO"];
     [self displayAlertWithString:compareAlert];
