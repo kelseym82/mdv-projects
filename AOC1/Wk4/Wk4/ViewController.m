@@ -101,6 +101,7 @@
         infoLabel.textAlignment = UITextAlignmentCenter;
         infoLabel.textColor = [UIColor blueColor];
         infoLabel.backgroundColor = [UIColor lightGrayColor];
+        infoLabel.numberOfLines = 2;
     }
         
     [self.view addSubview:infoLabel];
@@ -152,7 +153,7 @@
     //When the button is pressed, have the text "This application was created by: Firstname Lastname" appear in the info UILabel. Please replace firstname lastname with your name.
     else if (btn.tag == INFO_BTN)
     {
-        
+        infoLabel.text = @"This application was written with love by Michael Kelsey";
     }
 }
 
