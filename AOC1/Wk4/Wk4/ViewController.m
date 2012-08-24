@@ -3,6 +3,7 @@
 //  Wk4
 //
 //  Created by Michael Kelsey on 8/23/12.
+//  For Fullsail Online AOC I
 //  Copyright (c) 2012 Michael Kelsey. All rights reserved.
 //
 
