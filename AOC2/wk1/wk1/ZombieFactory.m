@@ -8,6 +8,9 @@
 
 #import "ZombieFactory.h"
 #import "BaseZombie.h"
+#import "FloaterZombie.h"
+#import "InfectedZombie.h"
+#import "ButcherZombie.h"
 
 @implementation ZombieFactory
 

@@ -12,9 +12,10 @@
 @interface FloaterZombie : BaseZombie
 {
     int explosionRadius;
+    int temp;
 }
 
-+(void)setZombieSize: (int)sizeOfZombie;
-+(int)getExplosionRadius;
+-(void)setZombieSize: (int)sizeOfZombie;
+-(int)getExplosionRadius;
 
 @end

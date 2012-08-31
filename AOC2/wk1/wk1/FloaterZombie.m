@@ -12,9 +12,18 @@
 
 @implementation FloaterZombie
 
+-(id)init
+{
+    if (self = [super init])
+    {
+        explosionRadius = 0;
+    }
+    return self;
+}
+
 -(void)setZombieSize: (int)sizeOfZombie
 {
-    explosionRadius = sizeOfZombie * 4;
+     explosionRadius = sizeOfZombie * 4;
 }
 
 -(int)getExplosionRadius
