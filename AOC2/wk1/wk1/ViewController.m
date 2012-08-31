@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "BaseZombie.h"
+#import "FloaterZombie.h"
 
 @interface ViewController ()
 
@@ -16,6 +18,14 @@
 
 - (void)viewDidLoad
 {
+    
+    FloaterZombie *floaterZombie = [[FloaterZombie alloc]init];
+    if (floaterZombie !=nil)
+    {
+        [floaterZombie setAttributes];
+    }
+        
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

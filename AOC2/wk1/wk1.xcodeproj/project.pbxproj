@@ -17,6 +17,7 @@
 		B224225115F042A6009FE7BA /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B224224F15F042A6009FE7BA /* ViewController_iPhone.xib */; };
 		B224225415F042A6009FE7BA /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B224225215F042A6009FE7BA /* ViewController_iPad.xib */; };
 		B224225C15F042F5009FE7BA /* BaseZombie.m in Sources */ = {isa = PBXBuildFile; fileRef = B224225B15F042F5009FE7BA /* BaseZombie.m */; };
+		B224225F15F046AB009FE7BA /* FloaterZombie.m in Sources */ = {isa = PBXBuildFile; fileRef = B224225E15F046AB009FE7BA /* FloaterZombie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		B224225315F042A6009FE7BA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		B224225A15F042F5009FE7BA /* BaseZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseZombie.h; sourceTree = "<group>"; };
 		B224225B15F042F5009FE7BA /* BaseZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseZombie.m; sourceTree = "<group>"; };
+		B224225D15F046AB009FE7BA /* FloaterZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloaterZombie.h; sourceTree = "<group>"; };
+		B224225E15F046AB009FE7BA /* FloaterZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloaterZombie.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				B224224115F042A6009FE7BA /* Supporting Files */,
 				B224225A15F042F5009FE7BA /* BaseZombie.h */,
 				B224225B15F042F5009FE7BA /* BaseZombie.m */,
+				B224225D15F046AB009FE7BA /* FloaterZombie.h */,
+				B224225E15F046AB009FE7BA /* FloaterZombie.m */,
 			);
 			path = wk1;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				B224224B15F042A6009FE7BA /* AppDelegate.m in Sources */,
 				B224224E15F042A6009FE7BA /* ViewController.m in Sources */,
 				B224225C15F042F5009FE7BA /* BaseZombie.m in Sources */,
+				B224225F15F046AB009FE7BA /* FloaterZombie.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
