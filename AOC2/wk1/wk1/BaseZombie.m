@@ -10,11 +10,15 @@
 
 @implementation BaseZombie
 
--(void)setAttributes:(EZombieType)type name:(NSString*)name speed:(int)speed;
+-(id)setAttributes:(EZombieType)type name:(NSString*)name speed:(int)speed;
 {
-    zombieName = name;
-    zombieSpeed = speed;
-    zombieType  = type;
+    if(self = [super init])
+    {
+        zombieName = name;
+        zombieSpeed = speed;
+        zombieType  = type;
+    }
+    return self;
 }
 
 @end

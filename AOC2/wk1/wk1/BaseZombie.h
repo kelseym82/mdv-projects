@@ -23,6 +23,6 @@ typedef enum
     int zombieSpeed;
 }
 
--(void)setAttributes:(EZombieType)type name:(NSString*)name speed:(int)speed;
+-(id)setAttributes:(EZombieType)type name:(NSString*)name speed:(int)speed;
 
 @end

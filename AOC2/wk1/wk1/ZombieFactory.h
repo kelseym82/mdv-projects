@@ -11,7 +11,7 @@
 
 @interface ZombieFactory : NSObject
 
-+(BaseZombie*)GetZombie:(EZombieType)zombieType name: (NSString*)name;
++(BaseZombie*)createZombie:(EZombieType)zombieType;
 
 
 @end

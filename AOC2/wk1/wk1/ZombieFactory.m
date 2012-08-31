@@ -11,19 +11,19 @@
 
 @implementation ZombieFactory
 
-+(BaseZombie*)GetZombie:(EZombieType)zombieType
++(BaseZombie*)createZombie:(EZombieType)zombieType
 {
     if (zombieType == 0)
     {
-        return [[ZOMBIETYPE_FLOATER alloc] initWithDetails:0 name:@"Zombie"];
+        return [[BaseZombie alloc] setAttributes:0 name:@"Floater" speed:2];
     }
     else if (zombieType == 1)
     {
-        return [[ZOMBIETYPE_INFECTED alloc] initWithDetails:0 name:@"Zombie"];
+        return [[BaseZombie alloc] setAttributes:1 name:@"Infected" speed:5];
     }
     else if (zombieType == 2)
     {
-        return [[ZOMBIETYPE_BUTCHER alloc] initWithDetails:0 name:@"Zombie"];
+        return [[BaseZombie alloc] setAttributes:2 name:@"Butcher" speed:10];
     }
     return nil;
 }
