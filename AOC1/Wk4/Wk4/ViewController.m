@@ -32,6 +32,7 @@
         usernameLabel.textAlignment = UITextAlignmentLeft;
         usernameLabel.textColor = [UIColor blackColor];
         usernameLabel.backgroundColor = [UIColor lightGrayColor];
+        
     }
     [self.view addSubview:usernameLabel];
     
