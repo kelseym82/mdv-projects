@@ -11,5 +11,8 @@
 
 
 @interface InfectedZombie : BaseZombie
+{
+    NSString* favFood;
+}
 
 @end

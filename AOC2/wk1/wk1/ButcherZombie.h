@@ -10,5 +10,8 @@
 #import "BaseZombie.h"
 
 @interface ButcherZombie : BaseZombie
+{
+    int killCount;
+}
 
 @end

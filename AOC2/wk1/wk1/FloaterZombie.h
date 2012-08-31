@@ -10,6 +10,9 @@
 #import "BaseZombie.h"
 
 @interface FloaterZombie : BaseZombie
+{
+    BOOL doesExplode;
+}
 
 
 @end

@@ -21,4 +21,14 @@
     return self;
 }
 
+-(NSString*)getName
+{
+    return zombieName;
+}
+
+-(int)getSpeed
+{
+    return zombieSpeed;
+}
+
 @end
