@@ -1,5 +1,5 @@
 //
-//  FloaterZombie.h
+//  InfectedZombie.h
 //  wk1
 //
 //  Created by Michael Kelsey on 8/30/12.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BaseZombie.h"
 
-@interface FloaterZombie : BaseZombie
 
+@interface InfectedZombie : BaseZombie
 
 @end

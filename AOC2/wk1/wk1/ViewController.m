@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "BaseZombie.h"
 #import "FloaterZombie.h"
+#import "InfectedZombie.h"
 
 @interface ViewController ()
 
@@ -22,7 +23,7 @@
     FloaterZombie *floaterZombie = [[FloaterZombie alloc]init];
     if (floaterZombie !=nil)
     {
-        [floaterZombie setAttributes];
+        
     }
         
     
