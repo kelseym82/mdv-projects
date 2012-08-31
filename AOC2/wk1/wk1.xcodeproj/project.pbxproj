@@ -19,6 +19,7 @@
 		B224225C15F042F5009FE7BA /* BaseZombie.m in Sources */ = {isa = PBXBuildFile; fileRef = B224225B15F042F5009FE7BA /* BaseZombie.m */; };
 		B224225F15F046AB009FE7BA /* FloaterZombie.m in Sources */ = {isa = PBXBuildFile; fileRef = B224225E15F046AB009FE7BA /* FloaterZombie.m */; };
 		B224226215F04857009FE7BA /* InfectedZombie.m in Sources */ = {isa = PBXBuildFile; fileRef = B224226115F04857009FE7BA /* InfectedZombie.m */; };
+		B224226515F04D1B009FE7BA /* ButcherZombie.m in Sources */ = {isa = PBXBuildFile; fileRef = B224226415F04D1B009FE7BA /* ButcherZombie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		B224225E15F046AB009FE7BA /* FloaterZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloaterZombie.m; sourceTree = "<group>"; };
 		B224226015F04857009FE7BA /* InfectedZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfectedZombie.h; sourceTree = "<group>"; };
 		B224226115F04857009FE7BA /* InfectedZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfectedZombie.m; sourceTree = "<group>"; };
+		B224226315F04D1B009FE7BA /* ButcherZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButcherZombie.h; sourceTree = "<group>"; };
+		B224226415F04D1B009FE7BA /* ButcherZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButcherZombie.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				B224225E15F046AB009FE7BA /* FloaterZombie.m */,
 				B224226015F04857009FE7BA /* InfectedZombie.h */,
 				B224226115F04857009FE7BA /* InfectedZombie.m */,
+				B224226315F04D1B009FE7BA /* ButcherZombie.h */,
+				B224226415F04D1B009FE7BA /* ButcherZombie.m */,
 			);
 			path = wk1;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				B224225C15F042F5009FE7BA /* BaseZombie.m in Sources */,
 				B224225F15F046AB009FE7BA /* FloaterZombie.m in Sources */,
 				B224226215F04857009FE7BA /* InfectedZombie.m in Sources */,
+				B224226515F04D1B009FE7BA /* ButcherZombie.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

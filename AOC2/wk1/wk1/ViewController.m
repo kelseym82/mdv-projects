@@ -25,6 +25,11 @@
     {
         
     }
+    InfectedZombie *infectedZombie = [[InfectedZombie alloc]init];
+    if (infectedZombie !=nil)
+    {
+        
+    }
         
     
     [super viewDidLoad];
