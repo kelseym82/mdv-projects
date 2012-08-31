@@ -10,9 +10,12 @@
 
 @interface ViewController : UIViewController
 {
-    UILabel *floaterLabel;
-    UILabel *infectedLabel;
-    UILabel *butcherLabel;
+    UILabel *floaterLabel1;
+    UILabel *infectedLabel1;
+    UILabel *butcherLabel1;
+    UILabel *floaterLabel2;
+    UILabel *infectedLabel2;
+    UILabel *butcherLabel2;
 }
 
 

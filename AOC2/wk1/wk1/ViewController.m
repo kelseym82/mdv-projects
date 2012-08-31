@@ -21,53 +21,65 @@
 
 - (void)viewDidLoad
 {
+         
+    
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+    
     self.view.backgroundColor = [UIColor blackColor];
     //Using ZombieFactory to create zombies
     FloaterZombie *floater = (FloaterZombie*) [ZombieFactory createZombie:0];
     InfectedZombie *infected = (InfectedZombie*) [ZombieFactory createZombie:1];
     ButcherZombie *butcher = (ButcherZombie*) [ZombieFactory createZombie:2];
-
+    
+    [floater setZombieSize:6];
+    
     
     
     
     //LABELS
     //Floater
-    floaterLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 10.0f, 310.0f, 75.0f)];
-    if (floaterLabel !=nil)
+    floaterLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 10.0f, 310.0f, 75.0f)];
+    if (floaterLabel1 !=nil)
     {
-        floaterLabel.text = [NSString stringWithFormat:@"The %@ zombie can run %d MPH.", [floater getName], [floater getSpeed]];
-        floaterLabel.textAlignment = UITextAlignmentCenter;
-        floaterLabel.textColor = [UIColor blackColor];
-        floaterLabel.backgroundColor = [UIColor orangeColor];
+        floaterLabel1.text = [NSString stringWithFormat:@"The %@ zombie can run %d MPH.", [floater getName], [floater getSpeed]];
+        floaterLabel1.textAlignment = UITextAlignmentCenter;
+        floaterLabel1.textColor = [UIColor blackColor];
+        floaterLabel1.backgroundColor = [UIColor orangeColor];
     }
-    [self.view addSubview:floaterLabel];
+    [self.view addSubview:floaterLabel1];
+    
+    floaterLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 85.0f, 310.0f, 75.0f)];
+    if (floaterLabel2 !=nil)
+    {
+        floaterLabel2.text = [NSString stringWithFormat:@"The %@ zombie explodes on sight, it will explode in a %d ft. radius.", [floater getName], [floater getExplosionRadius]];
+        floaterLabel2.textAlignment = UITextAlignmentCenter;
+        floaterLabel2.textColor = [UIColor blackColor];
+        floaterLabel2.backgroundColor = [UIColor orangeColor];
+    }
+    [self.view addSubview:floaterLabel2];
     
     //Infected
-    infectedLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 180.0f, 310.0f, 75.0f)];
-    if (infectedLabel !=nil)
+    infectedLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 180.0f, 310.0f, 75.0f)];
+    if (infectedLabel1 !=nil)
     {
-        infectedLabel.text = [NSString stringWithFormat:@"The %@ zombie can run %d MPH.", [infected getName], [infected getSpeed]];
-        infectedLabel.textAlignment = UITextAlignmentCenter;
-        infectedLabel.textColor = [UIColor blackColor];
-        infectedLabel.backgroundColor = [UIColor orangeColor];
+        infectedLabel1.text = [NSString stringWithFormat:@"The %@ zombie can run %d MPH.", [infected getName], [infected getSpeed]];
+        infectedLabel1.textAlignment = UITextAlignmentCenter;
+        infectedLabel1.textColor = [UIColor blackColor];
+        infectedLabel1.backgroundColor = [UIColor orangeColor];
     }
-    [self.view addSubview:infectedLabel];
+    [self.view addSubview:infectedLabel1];
     
     //Butcher
-    butcherLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 360.0f, 310.0f, 75.0f)];
-    if (butcherLabel !=nil)
+    butcherLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 360.0f, 310.0f, 75.0f)];
+    if (butcherLabel1 !=nil)
     {
-        butcherLabel.text = [NSString stringWithFormat:@"The %@ zombie can run %d MPH.", [butcher getName], [butcher getSpeed]];
-        butcherLabel.textAlignment = UITextAlignmentCenter;
-        butcherLabel.textColor = [UIColor blackColor];
-        butcherLabel.backgroundColor = [UIColor orangeColor];
+        butcherLabel1.text = [NSString stringWithFormat:@"The %@ zombie can run %d MPH.", [butcher getName], [butcher getSpeed]];
+        butcherLabel1.textAlignment = UITextAlignmentCenter;
+        butcherLabel1.textColor = [UIColor blackColor];
+        butcherLabel1.backgroundColor = [UIColor orangeColor];
     }
-    [self.view addSubview:butcherLabel];
-
-        
-    
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self.view addSubview:butcherLabel1];
 }
 
 - (void)viewDidUnload

@@ -9,15 +9,19 @@
 #import "FloaterZombie.h"
 #import "BaseZombie.h"
 
+
 @implementation FloaterZombie
 
--(id)init
+-(void)setZombieSize: (int)sizeOfZombie
 {
-    if (self = [super init])
-    {
-        [self setAttributes:ZOMBIETYPE_FLOATER name:@"Floater" speed:2];
-    }
-    return self;
+    explosionRadius = sizeOfZombie * 4;
 }
+
+-(int)getExplosionRadius
+{
+    return explosionRadius;
+}
+
+    
 
 @end
