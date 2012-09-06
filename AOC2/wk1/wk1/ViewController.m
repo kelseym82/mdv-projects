@@ -56,7 +56,7 @@
     floaterLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 85.0f, 310.0f, 75.0f)];
     if (floaterLabel2 !=nil)
     {
-        floaterLabel2.text = [NSString stringWithFormat:@"The %@ zombie explodes on sight, it will explode in a %d ft. radius.", [floater getName], [floater getExplosionRadius]];//<<why is this crashing??!?!?
+        //floaterLabel2.text = [NSString stringWithFormat:@"The %@ zombie explodes on sight, it will explode in a %d ft. radius.", [floater getName], [floater getExplosionRadius]];//<<why is this crashing??!?!?
         floaterLabel2.textAlignment = UITextAlignmentCenter;
         floaterLabel2.textColor = [UIColor blackColor];
         floaterLabel2.backgroundColor = [UIColor orangeColor];

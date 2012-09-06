@@ -38,16 +38,16 @@
 		B224224D15F042A6009FE7BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B224225015F042A6009FE7BA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		B224225315F042A6009FE7BA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
-		B224225A15F042F5009FE7BA /* BaseZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseZombie.h; sourceTree = "<group>"; };
-		B224225B15F042F5009FE7BA /* BaseZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseZombie.m; sourceTree = "<group>"; };
-		B224225D15F046AB009FE7BA /* FloaterZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloaterZombie.h; sourceTree = "<group>"; };
-		B224225E15F046AB009FE7BA /* FloaterZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloaterZombie.m; sourceTree = "<group>"; };
-		B224226015F04857009FE7BA /* InfectedZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfectedZombie.h; sourceTree = "<group>"; };
-		B224226115F04857009FE7BA /* InfectedZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfectedZombie.m; sourceTree = "<group>"; };
-		B224226315F04D1B009FE7BA /* ButcherZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButcherZombie.h; sourceTree = "<group>"; };
-		B224226415F04D1B009FE7BA /* ButcherZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButcherZombie.m; sourceTree = "<group>"; };
-		B224226615F04EC1009FE7BA /* ZombieFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZombieFactory.h; sourceTree = "<group>"; };
-		B224226715F04EC1009FE7BA /* ZombieFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZombieFactory.m; sourceTree = "<group>"; };
+		B224225A15F042F5009FE7BA /* BaseZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseZombie.h; path = wk1/BaseZombie.h; sourceTree = "<group>"; };
+		B224225B15F042F5009FE7BA /* BaseZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseZombie.m; path = wk1/BaseZombie.m; sourceTree = "<group>"; };
+		B224225D15F046AB009FE7BA /* FloaterZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloaterZombie.h; path = wk1/FloaterZombie.h; sourceTree = "<group>"; };
+		B224225E15F046AB009FE7BA /* FloaterZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FloaterZombie.m; path = wk1/FloaterZombie.m; sourceTree = "<group>"; };
+		B224226015F04857009FE7BA /* InfectedZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfectedZombie.h; path = wk1/InfectedZombie.h; sourceTree = "<group>"; };
+		B224226115F04857009FE7BA /* InfectedZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfectedZombie.m; path = wk1/InfectedZombie.m; sourceTree = "<group>"; };
+		B224226315F04D1B009FE7BA /* ButcherZombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ButcherZombie.h; path = wk1/ButcherZombie.h; sourceTree = "<group>"; };
+		B224226415F04D1B009FE7BA /* ButcherZombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ButcherZombie.m; path = wk1/ButcherZombie.m; sourceTree = "<group>"; };
+		B224226615F04EC1009FE7BA /* ZombieFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZombieFactory.h; path = wk1/ZombieFactory.h; sourceTree = "<group>"; };
+		B224226715F04EC1009FE7BA /* ZombieFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZombieFactory.m; path = wk1/ZombieFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +67,7 @@
 		B224222B15F042A6009FE7BA = {
 			isa = PBXGroup;
 			children = (
+				B22CFE8615F951A300427156 /* Classes */,
 				B224224015F042A6009FE7BA /* wk1 */,
 				B224223915F042A6009FE7BA /* Frameworks */,
 				B224223715F042A6009FE7BA /* Products */,
@@ -101,16 +102,6 @@
 				B224224F15F042A6009FE7BA /* ViewController_iPhone.xib */,
 				B224225215F042A6009FE7BA /* ViewController_iPad.xib */,
 				B224224115F042A6009FE7BA /* Supporting Files */,
-				B224225A15F042F5009FE7BA /* BaseZombie.h */,
-				B224225B15F042F5009FE7BA /* BaseZombie.m */,
-				B224225D15F046AB009FE7BA /* FloaterZombie.h */,
-				B224225E15F046AB009FE7BA /* FloaterZombie.m */,
-				B224226015F04857009FE7BA /* InfectedZombie.h */,
-				B224226115F04857009FE7BA /* InfectedZombie.m */,
-				B224226315F04D1B009FE7BA /* ButcherZombie.h */,
-				B224226415F04D1B009FE7BA /* ButcherZombie.m */,
-				B224226615F04EC1009FE7BA /* ZombieFactory.h */,
-				B224226715F04EC1009FE7BA /* ZombieFactory.m */,
 			);
 			path = wk1;
 			sourceTree = "<group>";
@@ -124,6 +115,23 @@
 				B224224815F042A6009FE7BA /* wk1-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B22CFE8615F951A300427156 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B224225A15F042F5009FE7BA /* BaseZombie.h */,
+				B224225B15F042F5009FE7BA /* BaseZombie.m */,
+				B224225D15F046AB009FE7BA /* FloaterZombie.h */,
+				B224225E15F046AB009FE7BA /* FloaterZombie.m */,
+				B224226015F04857009FE7BA /* InfectedZombie.h */,
+				B224226115F04857009FE7BA /* InfectedZombie.m */,
+				B224226315F04D1B009FE7BA /* ButcherZombie.h */,
+				B224226415F04D1B009FE7BA /* ButcherZombie.m */,
+				B224226615F04EC1009FE7BA /* ZombieFactory.h */,
+				B224226715F04EC1009FE7BA /* ZombieFactory.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +329,7 @@
 				B224225915F042A6009FE7BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
