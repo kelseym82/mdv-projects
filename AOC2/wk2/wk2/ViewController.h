@@ -15,6 +15,7 @@
     int currentOperation;
     float currentNumber;
     IBOutlet UISwitch *switchToggle;
+    IBOutlet UIView *disableInput;
 }
 -(IBAction)buttonNumberPressed:(id)sender;
 -(IBAction)buttonOperationPressed:(id)sender;

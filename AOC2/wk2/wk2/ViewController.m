@@ -14,6 +14,8 @@
 
 @implementation ViewController
 
+
+
 ///CALCULATOR/////////
 
 -(IBAction)buttonNumberPressed:(id)sender
@@ -47,23 +49,25 @@
 }
 //SWITCHY THINGY//////////
 
+
 -(IBAction)switchAction:(id)sender
 {
     if(self->switchToggle.on)
     {
-        [self.view setUserInteractionEnabled:YES];
-        result = 0;
+        self->disableInput.hidden = YES;
+        calculatorScreen.text = @"0";
+        currentNumber = 0;
     }
     else
     {
-        [self.view setUserInteractionEnabled:NO];
+        self->disableInput.hidden = NO;
     }
 }
 
 
 - (void)viewDidLoad
 {
-
+    
     
     
     [super viewDidLoad];
