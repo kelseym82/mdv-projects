@@ -15,6 +15,8 @@
 		B22CFF2615FABB0800427156 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B22CFF2515FABB0800427156 /* AppDelegate.m */; };
 		B22CFF2915FABB0800427156 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B22CFF2815FABB0800427156 /* ViewController.m */; };
 		B22CFF2C15FABB0800427156 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B22CFF2A15FABB0800427156 /* ViewController.xib */; };
+		B22CFF4515FAEBC400427156 /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B22CFF4415FAEBC400427156 /* InfoView.xib */; };
+		B22CFF4C15FAECF000427156 /* infoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B22CFF4B15FAECF000427156 /* infoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		B22CFF2715FABB0800427156 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B22CFF2815FABB0800427156 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B22CFF2B15FABB0800427156 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		B22CFF4415FAEBC400427156 /* InfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
+		B22CFF4915FAEC7C00427156 /* InfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoView.h; sourceTree = "<group>"; };
+		B22CFF4B15FAECF000427156 /* infoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 		B22CFF1B15FABB0800427156 /* wk2 */ = {
 			isa = PBXGroup;
 			children = (
+				B22CFF4715FAEBE600427156 /* Info View */,
 				B22CFF2415FABB0800427156 /* AppDelegate.h */,
 				B22CFF2515FABB0800427156 /* AppDelegate.m */,
 				B22CFF2715FABB0800427156 /* ViewController.h */,
@@ -96,6 +102,16 @@
 				B22CFF2315FABB0800427156 /* wk2-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B22CFF4715FAEBE600427156 /* Info View */ = {
+			isa = PBXGroup;
+			children = (
+				B22CFF4415FAEBC400427156 /* InfoView.xib */,
+				B22CFF4915FAEC7C00427156 /* InfoView.h */,
+				B22CFF4B15FAECF000427156 /* infoView.m */,
+			);
+			name = "Info View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +167,7 @@
 			files = (
 				B22CFF2015FABB0800427156 /* InfoPlist.strings in Resources */,
 				B22CFF2C15FABB0800427156 /* ViewController.xib in Resources */,
+				B22CFF4515FAEBC400427156 /* InfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +181,7 @@
 				B22CFF2215FABB0800427156 /* main.m in Sources */,
 				B22CFF2615FABB0800427156 /* AppDelegate.m in Sources */,
 				B22CFF2915FABB0800427156 /* ViewController.m in Sources */,
+				B22CFF4C15FAECF000427156 /* infoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

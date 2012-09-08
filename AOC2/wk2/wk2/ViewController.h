@@ -16,10 +16,14 @@
     float currentNumber;
     IBOutlet UISwitch *switchToggle;
     IBOutlet UIView *disableInput;
+    IBOutlet UISegmentedControl *backgroundControl;
+    IBOutlet UIButton *infoButton;
 }
 -(IBAction)buttonNumberPressed:(id)sender;
 -(IBAction)buttonOperationPressed:(id)sender;
 -(IBAction)switchAction:(id)sender;
+-(IBAction)backgroundChanged:(id)sender;
+-(IBAction)infotButtonPressed:(id)sender;
 
 
 @end

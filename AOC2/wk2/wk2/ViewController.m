@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "InfoView.h"
 
 @interface ViewController ()
 
@@ -36,6 +37,7 @@
             case 1:
                 result = result + currentNumber;
                 break;
+            
         }
         
     }
@@ -62,6 +64,38 @@
     {
         self->disableInput.hidden = NO;
     }
+}
+
+//CHANGE BACKGROUND COLOR
+-(IBAction)backgroundChanged:(id)sender
+{
+    switch ([self->backgroundControl selectedSegmentIndex])
+    {
+        case 0:
+        {
+            [self.view setBackgroundColor:[UIColor whiteColor]];
+        }
+            break;
+        case 1:
+        {
+            [self.view setBackgroundColor:[UIColor blueColor]];
+        }
+            break;
+        case 2:
+        {
+            [self.view setBackgroundColor:[UIColor greenColor]];
+        }
+            break;
+            
+        }
+}
+
+
+//GO TO INFO SCREEN
+-(IBAction)infotButtonPressed:(id)sender
+{
+    InfoView* info = [[InfoView alloc]initWithNibName:@"InfoView" bundle:nil];
+    [self presentModalViewController:info animated:YES];
 }
 
 
