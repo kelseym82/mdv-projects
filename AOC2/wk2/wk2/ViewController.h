@@ -24,6 +24,7 @@
 -(IBAction)switchAction:(id)sender;
 -(IBAction)backgroundChanged:(id)sender;
 -(IBAction)infotButtonPressed:(id)sender;
+-(IBAction)clearButtonPressed:(id)sender;
 
 
 @end

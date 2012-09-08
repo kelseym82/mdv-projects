@@ -66,6 +66,14 @@
     }
 }
 
+
+//CLEAR BUTTON
+-(IBAction)clearButtonPressed:(id)sender
+{
+    calculatorScreen.text = @"0";
+    currentNumber = 0;
+}
+
 //CHANGE BACKGROUND COLOR
 -(IBAction)backgroundChanged:(id)sender
 {
