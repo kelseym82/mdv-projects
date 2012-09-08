@@ -14,9 +14,11 @@
     IBOutlet UITextField *calculatorScreen;
     int currentOperation;
     float currentNumber;
+    IBOutlet UISwitch *switchToggle;
 }
 -(IBAction)buttonNumberPressed:(id)sender;
 -(IBAction)buttonOperationPressed:(id)sender;
+-(IBAction)switchAction:(id)sender;
 
 
 @end
