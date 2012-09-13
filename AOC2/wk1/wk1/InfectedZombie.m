@@ -20,6 +20,9 @@
     return self;
 }
 
-
+-(int)totalKills:(int)str
+{
+    return str *5;
+}
 
 @end

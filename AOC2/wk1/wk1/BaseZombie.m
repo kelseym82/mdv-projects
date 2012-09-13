@@ -31,6 +31,10 @@
     return zombieSpeed;
 }
 
+-(int)totalKills:(int)str
+{
+    return str * 2;
+}
 
 
 

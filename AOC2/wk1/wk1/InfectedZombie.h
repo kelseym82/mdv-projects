@@ -15,4 +15,6 @@
     NSString* favFood;
 }
 
+-(int)totalKills:(int)str;
+
 @end

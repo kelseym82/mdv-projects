@@ -30,4 +30,7 @@ typedef enum
 //Setter (Mutator)
 -(id)setAttributes:(EZombieType)type name:(NSString*)name speed:(int)speed;
 
+//Calculation
+-(int)totalKills:(int)str;
+
 @end

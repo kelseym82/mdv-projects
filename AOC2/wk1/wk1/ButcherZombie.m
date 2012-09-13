@@ -20,4 +20,9 @@
     return self;
 }
 
+-(int)totalKills:(int)str
+{
+    return killCount + str;
+}
+
 @end
