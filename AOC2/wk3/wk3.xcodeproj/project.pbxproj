@@ -15,6 +15,8 @@
 		B24165AF16028E6B00C01FD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B24165AE16028E6B00C01FD5 /* AppDelegate.m */; };
 		B24165B216028E6B00C01FD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24165B116028E6B00C01FD5 /* ViewController.m */; };
 		B24165B516028E6B00C01FD5 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24165B316028E6B00C01FD5 /* ViewController.xib */; };
+		B24165C1160291C100C01FD5 /* DatePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24165C0160291C100C01FD5 /* DatePickerController.xib */; };
+		B24165C41602922C00C01FD5 /* DatePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24165C31602922C00C01FD5 /* DatePickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		B24165B016028E6B00C01FD5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B24165B116028E6B00C01FD5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B24165B416028E6B00C01FD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		B24165C0160291C100C01FD5 /* DatePickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerController.xib; sourceTree = "<group>"; };
+		B24165C21602922C00C01FD5 /* DatePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerController.h; sourceTree = "<group>"; };
+		B24165C31602922C00C01FD5 /* DatePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,9 @@
 				B24165B116028E6B00C01FD5 /* ViewController.m */,
 				B24165B316028E6B00C01FD5 /* ViewController.xib */,
 				B24165A516028E6B00C01FD5 /* Supporting Files */,
+				B24165C0160291C100C01FD5 /* DatePickerController.xib */,
+				B24165C21602922C00C01FD5 /* DatePickerController.h */,
+				B24165C31602922C00C01FD5 /* DatePickerController.m */,
 			);
 			path = wk3;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 			files = (
 				B24165A916028E6B00C01FD5 /* InfoPlist.strings in Resources */,
 				B24165B516028E6B00C01FD5 /* ViewController.xib in Resources */,
+				B24165C1160291C100C01FD5 /* DatePickerController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +173,7 @@
 				B24165AB16028E6B00C01FD5 /* main.m in Sources */,
 				B24165AF16028E6B00C01FD5 /* AppDelegate.m in Sources */,
 				B24165B216028E6B00C01FD5 /* ViewController.m in Sources */,
+				B24165C41602922C00C01FD5 /* DatePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
