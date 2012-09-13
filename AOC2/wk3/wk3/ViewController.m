@@ -7,12 +7,27 @@
 //
 
 #import "ViewController.h"
+#import "DatePickerController.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+-(IBAction)onClick:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    if (button !=nil)
+    {
+        if (button.tag == 0)
+        {
+            DatePickerController* events = [[DatePickerController alloc]initWithNibName:@"DatePickerController" bundle:nil];
+            [self presentModalViewController:events animated:TRUE];
+            
+        }
+    }
+}
 
 - (void)viewDidLoad
 {

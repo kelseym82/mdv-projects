@@ -6,17 +6,19 @@
 //  Copyright (c) 2012 Michael Kelsey. All rights reserved.
 //
 
-#import "UIKit/UIKit.h"
+#import "ViewController.h"
 
 
 @interface DatePickerController : UIViewController
 {
     IBOutlet UITextField *eventText;
     IBOutlet UIDatePicker *eventDate;
+    NSString *event;
+    NSString *date;
 }
 
--(IBAction)eventSave:(id)sender;
--(IBAction)keyboardClose:(id)sender;
+
+-(IBAction)onClick:(id)sender;
 
 @end
 
