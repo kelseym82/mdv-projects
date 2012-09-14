@@ -12,7 +12,7 @@
 
 
 
-
+//Took a while to figure out how to do this... then I remembered the week two videos... DUH!
 @protocol EventDelegate <NSObject>
 
 @required
@@ -34,6 +34,7 @@
 -(IBAction)onClick:(id)sender;
 
 @property(strong) id<EventDelegate> delegate;
+//required to retain the event date, otherwise it will not pass it back to viewcontroller
 @property(retain)IBOutlet UIDatePicker *eventDate;
 
 @end

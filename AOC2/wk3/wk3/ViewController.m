@@ -17,6 +17,7 @@
 
 -(IBAction)onClick:(id)sender
 {
+    //Week 2 Video Example
     UIButton *button = (UIButton*)sender;
     if (button !=nil)
     {
@@ -35,7 +36,7 @@
 }
 
 
-
+//Adds the event to the main screen.
 -(void)loadEventToScreen:(NSString *)eventString
 {
     eventView.text = [eventView.text stringByAppendingString:eventString];
