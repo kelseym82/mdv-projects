@@ -22,8 +22,13 @@
     {
         if (button.tag == 0)
         {
-            DatePickerController* events = [[DatePickerController alloc]initWithNibName:@"DatePickerController" bundle:nil];
-            [self presentModalViewController:events animated:TRUE];
+            DatePickerController *events = [[DatePickerController alloc]initWithNibName:@"DatePickerController" bundle:nil];
+            if (events !=nil)
+            {
+                events.delegate = self;
+                [self presentModalViewController:events animated:TRUE];
+            }
+            
             
         }
     }

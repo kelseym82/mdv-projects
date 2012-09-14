@@ -16,7 +16,23 @@
 
 @implementation DatePickerController
 
-@synthesize event;
+@synthesize delegate, eventDate;
+
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self)
+    {
+        delegate = nil;
+    }
+    return self;
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    eventDate.minimumDate = [NSDate date];
+}
 
 -(IBAction)onClick:(id)sender
 {
@@ -31,20 +47,22 @@
         //A Save button appears at the top. When clicking on Save, the event description text and date/time information is collected and sent back to the primary view as the view is dismissed.
         else if (button.tag == 1)
         {
-            eventDate.minimumDate = [NSDate date];
-            NSString *tempString = eventText.text;
             NSDate *tempDate = [eventDate date];
             if (tempDate !=nil)
             {
                 NSDateFormatter *formatDate = [[NSDateFormatter alloc] init];
                 if (formatDate !=nil)
                 {
-                    [formatDate setDateFormat:@"MMMM dd, h:mm a"];
+                   [formatDate setDateFormat:@"MMMM dd, h:mm:ss a"];
                 }
                 date = [formatDate stringFromDate:tempDate];
             }
-            event = [NSString stringWithFormat:@"%@ \n%@ \n \n", tempString, date];
-                
+            event = [NSString stringWithFormat:@"New Event: %@ \n%@ \n \n", eventText.text, date];
+            if (delegate != nil)
+            {
+                [delegate loadEventToScreen:event];
+            }
+            
             [self dismissModalViewControllerAnimated:TRUE];
             
             

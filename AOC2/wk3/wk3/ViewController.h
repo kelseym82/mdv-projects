@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DatePickerController.h"
 
-@interface ViewController : UIViewController
+
+
+@interface ViewController : UIViewController <EventDelegate>
 {
     IBOutlet UITextView *eventView;
-    NSString *eventString;
+
 }
 
 -(IBAction)onClick:(id)sender;
