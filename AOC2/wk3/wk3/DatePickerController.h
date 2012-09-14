@@ -7,6 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "UIKit/UIKit.h"
+
+
+
+
+
+
 
 
 @interface DatePickerController : UIViewController
@@ -15,10 +22,13 @@
     IBOutlet UIDatePicker *eventDate;
     NSString *event;
     NSString *date;
+
 }
 
 
 -(IBAction)onClick:(id)sender;
+
+@property(retain) NSString *event;
 
 @end
 

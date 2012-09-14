@@ -7,6 +7,7 @@
 //
 
 #import "DatePickerController.h"
+#import "ViewController.h"
 
 @interface DatePickerController ()
 
@@ -15,21 +16,23 @@
 
 @implementation DatePickerController
 
+@synthesize event;
 
-//A Save button appears at the top. When clicking on Save, the event description text and date/time information is collected and sent back to the primary view as the view is dismissed.
 -(IBAction)onClick:(id)sender
 {
     UIButton *button = (UIButton*)sender;
     if (button !=nil)
     {
+        //A Close Keyboard button is also on the view. When clicking on this button, the keyboard that is opened will be dismissed.
         if (button.tag == 0)
         {
             [eventText resignFirstResponder];
         }
+        //A Save button appears at the top. When clicking on Save, the event description text and date/time information is collected and sent back to the primary view as the view is dismissed.
         else if (button.tag == 1)
         {
-            NSString *tempString = eventText.text;
             eventDate.minimumDate = [NSDate date];
+            NSString *tempString = eventText.text;
             NSDate *tempDate = [eventDate date];
             if (tempDate !=nil)
             {
@@ -40,9 +43,9 @@
                 }
                 date = [formatDate stringFromDate:tempDate];
             }
-            [self dismissModalViewControllerAnimated:TRUE];
             event = [NSString stringWithFormat:@"%@ \n%@ \n \n", tempString, date];
-            
+                
+            [self dismissModalViewControllerAnimated:TRUE];
             
             
             
@@ -50,7 +53,7 @@
     }
 }
 
-//A Close Keyboard button is also on the view. When clicking on this button, the keyboard that is opened will be dismissed.
+
 
 
 

@@ -29,6 +29,13 @@
     }
 }
 
+
+
+-(void)loadEventToScreen:(NSString *)eventString
+{
+    eventView.text = [eventView.text stringByAppendingString:eventString];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
