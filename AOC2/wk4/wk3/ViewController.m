@@ -23,6 +23,7 @@
     {
         if (button.tag == 1)
         {
+            //saves the data to NSUserDefaults
             NSUserDefaults *savedEvents = [NSUserDefaults standardUserDefaults];
             if (savedEvents !=nil)
             {
@@ -31,11 +32,21 @@
                 [savedEvents setObject:eventString forKey:@"savedEvents"];
                 
                 [savedEvents synchronize];
+                //Added alert so you know the button was successful in being clicked.
+                UIAlertView *alert = [[UIAlertView alloc]
+                                      initWithTitle:@"Saved"
+                                      message:@"You have successfully saved event data."
+                                      delegate:self
+                                      cancelButtonTitle:@"Close"
+                                      otherButtonTitles:nil, nil];
+                [alert show];
+                [alert release];
             }
         }
     }
 }
 
+//On swiping to the right, will bring you to the DatePickerController screen
 -(void)onSwipe:(UIGestureRecognizer*)swipe
 {
     DatePickerController *events = [[DatePickerController alloc] initWithNibName:@"DatePickerController" bundle:nil];
