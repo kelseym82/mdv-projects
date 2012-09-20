@@ -32,6 +32,10 @@
 
 -(void)viewDidLoad
 {
+    leftSwiper = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(onSwipe:)];
+    leftSwiper.direction = UISwipeGestureRecognizerDirectionLeft;
+    [swipeLabel addGestureRecognizer:leftSwiper];
+    
     [super viewDidLoad];
     eventDate.minimumDate = [NSDate date];
 }
@@ -46,49 +50,51 @@
         {
             [eventText resignFirstResponder];
         }
-        //A Save button appears at the top. When clicking on Save, the event description text and date/time information is collected and sent back to the primary view as the view is dismissed.
-        else if (button.tag == 1)
+        
+    }
+}
+
+
+
+//A Save button was deleted. When swiping left, the event description text and date/time information is collected and sent back to the primary view as the view is dismissed.
+
+-(void)onSwipe:(UIGestureRecognizer*)swipe
+{
+    if ([eventText.text length] == 0)
+    {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"ERROR"
+                              message:@"Event Cannot be blank"
+                              delegate:self
+                              cancelButtonTitle:@"Okay"
+                              otherButtonTitles:nil, nil];
+        [alert show];
+        [alert release];
+    }
+    else
+    {
+        NSDate *tempDate = [eventDate date];
+        if (tempDate !=nil)
         {
-            //Added this Alert because it makes sense to not have a blank event.
-            if ([eventText.text length] == 0)
+            //Formats the date to resemble the example on FSO
+            NSDateFormatter *formatDate = [[NSDateFormatter alloc] init];
+            if (formatDate !=nil)
             {
-                UIAlertView *alert = [[UIAlertView alloc]
-                                      initWithTitle:@"ERROR"
-                                      message:@"Event Cannot be blank"
-                                      delegate:self
-                                      cancelButtonTitle:@"Okay"
-                                      otherButtonTitles:nil, nil];
-                [alert show];
-                [alert release];
+                [formatDate setDateFormat:@"MMMM dd, h:mm:ss a"];
             }
-            else
-            {
-            NSDate *tempDate = [eventDate date];
-            if (tempDate !=nil)
-            {
-                //Formats the date to resemble the example on FSO
-                NSDateFormatter *formatDate = [[NSDateFormatter alloc] init];
-                if (formatDate !=nil)
-                {
-                   [formatDate setDateFormat:@"MMMM dd, h:mm:ss a"];
-                }
-                date = [formatDate stringFromDate:tempDate];
-              
-            }
-            event = [NSString stringWithFormat:@"New Event: %@ \n%@ \n \n", eventText.text, date];
-           
-                
-            
-            if (delegate != nil)
-            {
-                [delegate loadEventToScreen:event];
-            }
-            //Sends you back to main screen
-            [self dismissModalViewControllerAnimated:TRUE];
-            }
-            
+            date = [formatDate stringFromDate:tempDate];
             
         }
+        event = [NSString stringWithFormat:@"New Event: %@ \n%@ \n \n", eventText.text, date];
+        
+        
+        
+        if (delegate != nil)
+        {
+            [delegate loadEventToScreen:event];
+        }
+        //Sends you back to main screen
+        [self dismissModalViewControllerAnimated:TRUE];
     }
 }
 

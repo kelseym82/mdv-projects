@@ -27,6 +27,8 @@
     NSString *event;
     NSString *date;
     id <EventDelegate> delegate;
+    IBOutlet UILabel *swipeLabel;
+    UISwipeGestureRecognizer *leftSwiper;
 
 }
 
