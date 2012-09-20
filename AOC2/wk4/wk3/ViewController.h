@@ -14,6 +14,10 @@
 @interface ViewController : UIViewController <EventDelegate>
 {
     IBOutlet UITextView *eventView;
+    IBOutlet UILabel *swipeLabel;
+    UISwipeGestureRecognizer *rightSwiper;
+
+    
 
 }
 

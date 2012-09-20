@@ -36,6 +36,15 @@
     }
 }
 
+-(void)onSwipe:(UIGestureRecognizer*)swipe
+{
+    DatePickerController *events = [[DatePickerController alloc] initWithNibName:@"DatePickerController" bundle:nil];
+    if (events !=nil)
+    {
+        events.delegate = self;
+        [self presentModalViewController:events animated:TRUE];
+    }
+}
 
 //Adds the event to the main screen.
 -(void)loadEventToScreen:(NSString *)eventString
@@ -48,6 +57,11 @@
 
 - (void)viewDidLoad
 {
+    
+    rightSwiper = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(onSwipe:)];
+    rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
+    [swipeLabel addGestureRecognizer:rightSwiper];
+    
     NSUserDefaults *savedEvents = [NSUserDefaults standardUserDefaults];
     if (savedEvents !=nil)
     {
